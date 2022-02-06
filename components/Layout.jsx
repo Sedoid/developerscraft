@@ -3,9 +3,9 @@ import { useColorMode, Flex, Button, Box,Container, Stack,useColorModeValue } fr
 import { Header} from '.'
 import { DarkModeSwitch } from '../components'
 import NextLink from 'next/link'
+import Script from 'next/script'
 import styled from '@emotion/styled'
 import Footer from './Footer'
-
 
 const Layout = ({children}) => {
 

@@ -1,8 +1,9 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import { PostCard,Categories, PostWidget, Advertisement, Follow} from '../components'
 import { getPosts } from '../services'
 import { VisuallyHidden,Box, Input, InputRightElement, InputGroup, Button,useColorModeValue,Text, Stack, chakra, Flex, isTruncated, } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin,FaCogs,FaTractor,FaFutbol, FaMusic, FaGlobeAfrica, FaLanguage } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin,FaCogs,FaTractor,FaFutbol, FaMusic, FaGlobeAfrica, FaLanguage, FaHeartbeat } from 'react-icons/fa';
 
 import { FeaturedPosts } from '../sections'
 
@@ -40,6 +41,25 @@ export default function Home({posts}) {
       <Head>
         <title>Green Lights</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
+        <link rel="canonical" href="http://greenlights.vercel.app" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:title" content="GreenLights" />
+
+        <meta property="og:description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
+
+        <meta property="og:image" content="https://greenlights.vercel.app/favicon.ico" />
+
+        <meta property="og:url" content="https://greenlights.vercel.app" />
+
+        <meta property="og:site_name" content="GreenLights" />
+
+
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951101662003064"
+        crossorigin="anonymous">
+        </Script>
       </Head>
       
       {/* SearchBar Section */}
@@ -80,7 +100,7 @@ export default function Home({posts}) {
 
 
                 <Box  maxW="30%" flexGrow={1}>
-                <Text className='category' flexGrow={1}  textAlign="start"  isTruncated className=''>
+                <Text className='category' flexGrow={1}  textAlign="start"  isTruncated>
                   <SocialButton label={'YouTube'} href={'#'}>
                   <FaLanguage color='' />
                   </SocialButton>   
@@ -91,7 +111,7 @@ export default function Home({posts}) {
 
 
                 <Box  maxW="30%" flexGrow={1}>
-                <Text className='category'  textAlign="start"  isTruncated  className=''>
+                <Text className='category'  textAlign="start"  isTruncated >
                   <SocialButton label={'Instagram'} href={'#'}>
                   <FaGlobeAfrica color='' />
                   </SocialButton>    
@@ -107,7 +127,7 @@ export default function Home({posts}) {
           <Box   maxW="30%"  flexGrow={1}>
           <Text className='category'  textAlign="start"   isTruncated flexGrow={1}>
               <SocialButton label={'Instagram'} href={'#'}>
-              <FaTractor color='' />
+              <FaHeartbeat color='' />
               </SocialButton>  
               &nbsp;Health
           </Text>

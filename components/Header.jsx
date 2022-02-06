@@ -50,8 +50,7 @@ function Header() {
                 color={useColorModeValue('gray.700', 'gray.200')}>
 
                 <Container textAlign="center"  py={7}  as={Stack} maxW={'6xl'} className=''>
-                <Text fontWeight="bold" color="white" fontSize="2xl" id="banner" className="capitalize">Learn Something New and Have Fun</Text>
-                {/* <Text fontWeight="bold" color="white" className="capitalize">Learn Something New</Text> */}
+                <Text fontWeight="bold" fontSize="19px"  color="white" id="banner" className="capitalize">Learn Something New and Have Fun</Text>
                 </Container>                 
             </Box>
           

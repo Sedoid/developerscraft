@@ -13,8 +13,28 @@ const postDetails = ({post}) => {
     return (
         <div>
                 <Head>
-                    <title>Green Lights : {post.title}</title>
+                    <title>{post.title}</title>
                     <link rel="icon" href="/favicon.ico" />
+                    <meta name="description" content={post.slug} />
+
+
+                    <meta property="og:type" content="article" />
+
+                    <meta property="og:title" content={post.title} />
+
+                    <meta property="og:description" content={post.slug} />
+
+                    <meta property="og:image" content={post.featuredImage?.url} />
+
+                    <meta property="og:url" content={"https://greenlights.vercel.app/post/"+post.featuredImagetitle} />
+
+                    <meta property="og:site_name" content="https://greenlights.vercel.app" />
+
+
+
+                    <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951101662003064"
+                        crossorigin="anonymous">
+                    </Script>
                 </Head>
       
             <div className="container mx-auto px-lg-10 mb-8">
