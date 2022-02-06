@@ -1,0 +1,198 @@
+import React from 'react'
+import moment from 'moment';
+import Link from 'next/link';
+import { useColorMode, Flex,Badge, Box, Image, Container, Text, Stack, HStack, VStack,useColorModeValue } from '@chakra-ui/react'
+import { FaFileAudio } from 'react-icons/fa';
+
+const PostCard = ({post,index,category,content}) => {
+
+    return (
+        <div  style={{marginBottom: '3em'}}>
+
+
+                {
+                    index ==0 ? 
+                    
+                 <>
+                    <Box
+                        bg={useColorModeValue('white', 'gray.900')}
+                        color={useColorModeValue('gray.700', 'gray.200')}
+                        maxW="100%" borderWidth='1px' borderRadius='md' overflow='hidden'
+                        className='shadow-sm'
+                    >
+                        <Flex id="latest" justifyContent="space-between"  alignItems="stretch"  align="start">
+                            <VStack id="latest_content" align="start"  className='p-5'>
+                                <Stack direction="row" spacing="10px" align="center">
+                                    <Image
+                                    borderRadius='full'
+                                    boxSize='35px'
+                                    id="postcared_author_image"
+                                    src={post.author.photo.url}
+                                    alt={post.author.name}
+                                    />
+                                    
+                                    <Text id="postcard_author" className='sm:text-xs md:text-sm author_name'  fontWeight="semibold">{post.author.name}</Text>
+                                    <Badge ml='1' style={{fontSize:"10px"}} p={1} className='rounded-md' colorScheme='green'>
+                                        Latest
+                                    </Badge>
+                                </Stack>
+                                
+                                <Text fontSize="2xl"  id="postcard_title"  lineHeight={0.9} className="transition duration-700 cursor-pointer hover:text-green-600" fontWeight="bold">
+                                    <Link href={`/post/${post.slug}`}>
+                                    {post.title}
+                                    </Link>
+                                </Text> 
+
+                                <div  className='rounded-md' id="latest_image" style={{
+                                    width:"100%", 
+                                    height: "200px",
+                                    backgroundImage:`url("${post.featuredImage.url}")`,
+                                    backgroundSize:'cover', 
+                                    backgroundPosition:'center center'
+                                    
+                                    }}>
+                                </div>
+
+
+                                <Box noOfLines={10} id="postcard_content">
+                                    <i>{post.excerpt}</i>
+                                    <br />
+                                    <br />
+                                
+                                    {
+                                    post.featuredAudio?.url? <Box>
+                                        <Text  fontSize="sm" fontWeight="semibold" style={{marginBottom: '5px'}}>Audio Track</Text>
+                                        <audio  controls style={{display:post.featuredAudio?.url? "block": "none"}} className="mb-7"  src={post.featuredAudio?.url} /> 
+                                        </Box>: <Text className='' fontWeight="semibold" fontStyle="italic">No Audio Track Available<br /> </Text> 
+                                    }
+                                    
+                                                        
+                                    {post.content.raw?.children[0].children[0].text}<br />
+                                    {post.content.raw?.children[1].children[0].text}<br />
+                                    {post.content.raw?.children[2].children[0].text}<br />
+                                    {post.content.raw?.children[3].children[0].text}
+                                    
+                                </Box> 
+
+                                <div className="text-center">
+                                    <Link href={`/post/${post.slug}`}>
+                                    <span className="transition duraion-500 transform hover:-translate-y-1 inline-block bg-green-600 text-sm font-medium rounded-full text-white px-3 py-2 cursor-pointer"> Continue Reading... </span>
+                                    </Link>
+                                </div>
+                                
+                                <br />
+
+                                <Flex direction="row" mt={5} id="postcard_details" spacing="10px" className='w-full' align="center" bg="transparent" alignItems="center">
+                                    <Text fontSize="sm" mr={2}>{moment(post.createdAt).format('MMM DD')}</Text>
+                                    <FaFileAudio style={{display:post.featuredAudio?.url? "block": "none"}}  />
+
+                                    {
+                                        post.categories.map(category => 
+                                        <Text  key={category.slug} fontSize="sm" ml={2}>
+                                            <Badge ml='1' colorScheme='green' style={{fontSize:"10px"}} paddingX={3} paddingY={1}  rounded={'full'} className='rounded-md'>
+                                                {category.name}
+                                            </Badge>
+                                        </Text>
+                                        
+                                        )
+                                    }
+                                </Flex> 
+            {/* 
+                                <Stack direction="row"  className='w-full' id="postcard_details" spacing="10px" align="center">
+                                    <Text fontSize="sm">{moment(post.createdAt).format('MMM DD')}</Text>
+                                    <FaFileAudio style={{display:post.featuredAudio?.url? "block": "none"}} />
+                                    <Text fontSize="sm">
+                                        <Badge ml='1' colorScheme='green' paddingX={3} paddingY={1}  rounded={'full'} className='rounded-md'>
+                                            {post.categories[0].name}
+                                        </Badge>
+                                    </Text>
+                                </Stack>  */}
+
+                            </VStack> 
+                        </Flex>
+                    </Box>         
+
+                    <Flex direction="row" align="center"  style={{marginTop: '3em'}}>
+                        <Text
+                        bg={useColorModeValue('gray.50', 'gray.900')}
+                        color={useColorModeValue('gray.700', 'gray.200')
+                        }
+                        fontWeight="semibold"
+                        marginRight = {3}
+                        id="recent"
+                        >Recent Articles</Text>
+                        <Box flexGrow="1"  height="1px" bg="gray.300"></Box>
+                    </Flex>      
+                       
+                 </>   
+  
+                :
+
+                <Box
+                bg={useColorModeValue('white', 'gray.900')}
+                color={useColorModeValue('gray.700', 'gray.200')}
+                maxW="100%" borderWidth='1px' borderRadius='md' overflow='hidden'
+                className='shadow-sm'
+                >
+                <Flex justifyContent="space-between"  alignItems="stretch"   align="start">
+                    <VStack align="start" maxWidth="65%" flexGrow={2} padding={5} paddingRight={0}>
+                    <Stack direction="row" spacing="10px" align="center">
+                        <Image
+                        borderRadius='full'
+                        boxSize='35px'
+                        id="postcared_author_image"
+                        src={post.author.photo.url}
+                        alt={post.author.name}
+                        />
+                        
+                        <Text id="postcard_author" className='sm:text-xs md:text-sm'  fontWeight="semibold">{post.author.name}</Text>
+                        {/* <Badge ml='1' colorScheme='green'>
+                            New
+                        </Badge> */}
+                    </Stack>
+                    
+                        <Text fontSize="2xl"  id="postcard_title"  lineHeight={0.9} className="transition duration-700 cursor-pointer hover:text-green-600" fontWeight="bold">
+                            <Link href={`/post/${post.slug}`}>
+                                {post.title}
+                            </Link>
+                        </Text> 
+                    
+                    <Text noOfLines={2} id="postcared_content">{post.excerpt}</Text> 
+                    <Stack direction="row" id="postcard_details" spacing="10px" align="center">
+                        <Text fontSize="sm">{moment(post.createdAt).format('MMM DD')}</Text>
+                        <FaFileAudio style={{display:post.featuredAudio?.url? "block": "none"}} />
+
+                        {
+                            post.categories.map(category => 
+                            <Text  key={category.slug} fontSize="sm" ml={2}>
+                                <Badge ml='1' colorScheme='green' style={{fontSize:"10px"}} paddingX={3} paddingY={1}  rounded={'full'} className='rounded-md badge'>
+                                    {category.name}
+                                </Badge>
+                            </Text>
+                            
+                            )
+                        }
+                    </Stack>                
+                </VStack> 
+
+                    <div style={{
+                        width:"33%", 
+                        backgroundImage:`url("${post.featuredImage.url}")`,
+                        backgroundSize:'cover', 
+                        backgroundPosition:'center center'
+                        
+                        }}>
+                    </div>
+                </Flex>
+
+
+
+                </Box>
+                }
+
+  
+        </div>
+    )
+}
+
+export default PostCard

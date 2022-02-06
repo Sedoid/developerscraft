@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Lobster&family=Roboto:wght@300;400;500&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  &:before{
+    content:'';
+    content: "";
+    width: 100%;
+    height: 100vh;
+    //background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
+    // background: #D3D3D3;
+    // background-image: url("../public/bg.jpg");
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+#logo_title{
+  font-family: 'Lobster', cursive;
+}
+
+#banner{
+  font-family: 'Cairo', sans-serif;
+  font-size: '23px';
+}
+
+.text-shadow{
+  text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+}
+
+.adjacent-post{
+  & .arrow-btn{
+    transition: width 300ms ease;
+    width: 50px;
+  }
+  &:hover{
+    & .arrow-btn{
+      width: 60px;
+    }
+  }
+}
+
+.react-multi-carousel-list {
+  & .arrow-btn{
+    transition: width 300ms ease;
+    width: 50px;
+    &:hover{
+      width: 60px;
+    }
+  }
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#postcard_title{
+  font-family: 'Cairo';
+}
+
+#postcard_content, .follow_content{
+  font-family: 'Roboto';
+}
+
+#blog{
+  font-family: 'Roboto';
+  line-height: 140%;
+}
+
+#recent{
+  font-family: 'Cairo', sans-serif;
+  font-size: 18px;
+}
+
+.sub_title{
+  font-family: 'Cairo', sans-serif;
+  font-size: 18px;
+}
+.badge, .author_name{
+  font-family: 'Cairo', sans-serif;
+}
+
+.category{
+  font-family: 'Cairo';
+}
+
+#postcard_author{
+  font-size: 15px;
+}
+@media (max-width: 640px) {
+
+  #header #top{
+    padding-right: 5px;
+    padding-top: 2px;
+    // padding-bottom: 2px;
+  }
+
+  #darkMode{
+    position: absolute;
+    right: 0;
+    font-size: 10px;
+    // background-color: red;
+  }
+  #logo_title{
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    position: relative;
+    top: 6px;
+  }
+  #postcard_author{
+    font-size: 12px;
+  }
+
+  #postcard_title{
+    font-size: 16px;
+    font-family: 'Lobster', cursive;
+
+  }
+
+  #postcared_author_image{
+    height: 25px;
+    width: 25px;
+  }
+
+  #postcared_content{
+    font-size: 15px;
+  }
+
+  #postcared_content{
+    font-size: 14px;
+  }
+
+  #popular_searches{
+    display: none;
+  }
+}
