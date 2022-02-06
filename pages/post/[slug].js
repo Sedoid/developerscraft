@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Script from 'next/script'
 import {getPosts,getPostDetails} from '../../services'
 import { useRouter } from 'next/dist/client/router'
 import {Comments,CommentForm,PostDetail,PostWidget,Author,Categories,Loader,Advertisement} from '../../components'
