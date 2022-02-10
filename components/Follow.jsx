@@ -58,20 +58,20 @@ const Follow = () => {
                 </Center>
                 <Stack direction={'row'} align="center" justifyContent="center" spacing={7}>
 
-                    <SocialButton label={'Twitter'} href={'#'}>
-                    <FaTwitter color=""/>
+                    <SocialButton label={'Twitter'} href={'https://twitter.com/IghtsGreen'}>
+                    <FaTwitter style={{color:'#00acee'}}/>
                     </SocialButton>
 
-                    <SocialButton label={'Whatsapp'} href={'#'}>
-                    <FaWhatsapp color='' />
+                    <SocialButton label={'Whatsapp'} href={'https://wa.me/+237654451039'}>
+                    <FaWhatsapp color='' style={{color:'#25D366'}} />
                     </SocialButton>
 
-                    <SocialButton label={'Instagram'} href={'#'}>
-                    <FaInstagram color='' />
+                    <SocialButton label={'Instagram'} href={'https://www.instagram.com/_greenlights__/'}>
+                    <FaInstagram style={{color:'#fb3958'}} />
                     </SocialButton>
 
-                    <SocialButton label={'Facebook'} href={'#'}>
-                    <FaFacebook color='' />
+                    <SocialButton label={'Facebook'} href={'https://www.facebook.com/GreenLights-111635238105668'}>
+                    <FaFacebook  style={{color:'#3b5998'}} />
                     </SocialButton> 
 
               </Stack>

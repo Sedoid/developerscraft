@@ -94,7 +94,7 @@ export default function Home({posts}) {
                     <SocialButton label={'Twitter'}  href={'#'}>
                     <FaCogs color="" />
                     </SocialButton>  
-                    &nbsp;Technology            
+                     &nbsp;Technology            
                   </Text>
                 </Box>
 

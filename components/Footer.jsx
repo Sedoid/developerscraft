@@ -13,7 +13,7 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
   import { ReactNode } from 'react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaInstagram, FaTwitter, FaYoutube,FaWhatsapp, FaFacebook } from 'react-icons/fa';
   import { BiMailSend } from 'react-icons/bi';
   
   const Logo = (props) => {
@@ -92,15 +92,21 @@ import {
                 © 2022 Green Lights. All rights reserved
               </Text>
               <Stack direction={'row'} spacing={6}>
-                <SocialButton label={'Twitter'} href={'#'}>
-                  <FaTwitter color='white' />
+                <SocialButton label={'Twitter'} href={'https://twitter.com/IghtsGreen'}>
+                  <FaTwitter/>
                 </SocialButton>
-                <SocialButton label={'YouTube'} href={'#'}>
-                  <FaYoutube color='white' />
+
+                <SocialButton label={'Whatsapp'} href={'https://wa.me/+237654451039'}>
+                  <FaWhatsapp />
                 </SocialButton>
-                <SocialButton label={'Instagram'} href={'#'}>
-                  <FaInstagram color='white' />
+
+                <SocialButton label={'Instagram'} href={'https://www.instagram.com/_greenlights__/'}>
+                  <FaInstagram />
                 </SocialButton>
+
+                <SocialButton label={'Facebook'} href={'https://www.facebook.com/GreenLights-111635238105668'}>
+                  <FaFacebook />
+                </SocialButton> 
               </Stack>
             </Stack>
             <Stack align={'flex-start'}>
