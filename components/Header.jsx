@@ -46,7 +46,7 @@ function Header() {
                 
             </Container> 
             <Box
-                bg={useColorModeValue('green.400', 'green.400')}
+                bg={useColorModeValue('green.500', 'green.500')}
                 color={useColorModeValue('gray.700', 'gray.200')}>
 
                 <Container textAlign="center"  py={7}  as={Stack} maxW={'6xl'} className=''>
