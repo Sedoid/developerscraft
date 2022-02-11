@@ -42,7 +42,7 @@ export default function Home({posts}) {
         <title>Green Lights</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
-        <link rel="canonical" href="http://greenlights.vercel.app" />
+        <link rel="canonical" href="https://thegreenlights.net" />
 
         <meta property="og:type" content="website" />
 
@@ -50,9 +50,9 @@ export default function Home({posts}) {
 
         <meta property="og:description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
 
-        <meta property="og:image" content="https://greenlights.vercel.app/favicon.ico" />
+        <meta property="og:image" content="https://thegreenlights.net/favicon.ico" />
 
-        <meta property="og:url" content="https://greenlights.vercel.app" />
+        <meta property="og:url" content="https://thegreenlights.net" />
 
         <meta property="og:site_name" content="GreenLights" />
 

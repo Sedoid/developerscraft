@@ -27,9 +27,9 @@ const postDetails = ({post}) => {
 
                     <meta property="og:image" content={post.featuredImage?.url} />
 
-                    <meta property="og:url" content={"https://greenlights.vercel.app/post/"+post.featuredImagetitle} />
+                    <meta property="og:url" content={"https://thegreenlights.net/post/"+post.featuredImagetitle} />
 
-                    <meta property="og:site_name" content="https://greenlights.vercel.app" />
+                    <meta property="og:site_name" content="https://thegreenlights.net" />
 
 
 
