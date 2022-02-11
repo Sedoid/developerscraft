@@ -74,7 +74,7 @@ export default function Home({posts}) {
           className='rounded-md'
         />
         <InputRightElement width='6rem' className='position-relative top-10'>
-          <Button bg="green.400" color="white" className='hover:bg-green-700' mt={5}  mr={5} p={5} size='md'>
+          <Button bg="green.400" color="white" className='hover:bg-green-800' mt={5}  mr={5} p={5} size='md'>
             Search
           </Button>
         </InputRightElement>
