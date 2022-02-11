@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }) {
           options={{
           initialColorMode: "light",
           useSystemColorMode: true
-        }}      
+        }}    
       >
  
         <Layout>

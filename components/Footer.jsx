@@ -12,8 +12,7 @@ import {
     IconButton,
     useColorModeValue,
   } from '@chakra-ui/react';
-  import { ReactNode } from 'react';
-  import { FaInstagram, FaTwitter, FaYoutube,FaWhatsapp, FaFacebook } from 'react-icons/fa';
+  import { FaInstagram, FaTwitter, FaWhatsapp, FaFacebook } from 'react-icons/fa';
   import { BiMailSend } from 'react-icons/bi';
   
   const Logo = (props) => {

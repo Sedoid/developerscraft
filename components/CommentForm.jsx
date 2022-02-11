@@ -1,5 +1,4 @@
 import { Box, useColorModeValue } from '@chakra-ui/react';
-import { comment } from 'postcss';
 import React,{useState,useEffect,useRef} from 'react'
 import { submitComment } from '../services';
 
@@ -53,9 +52,9 @@ const CommentForm = ({slug}) => {
     return (
         <Box 
         bg={useColorModeValue('grey.900', 'gray.900')}
-        className={useColorModeValue('light_shadow','dark_shadow')}
+        className={useColorModeValue('light_shadow bg-white shadow-lg rounded-lg p-8 pb-12 mb-8','dark_shadow bg-white shadow-lg rounded-lg p-8 pb-12 mb-8')}
         color={useColorModeValue('gray.700', 'gray.400')}
-        className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8"  borderWidth='1px' borderRadius='md'>
+          borderWidth='1px' borderRadius='md'>
             <h1 className="text-xl mb-8 font-semibold border-b pb-4">Leave a Reply</h1>
             <div className="grid grid-cols-1 gap-4 mb-4">
                 <textarea ref={commentEl} className="p-4 outline-nome w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-grey-700" placeholder="Comment" name="comment"/>

@@ -3,16 +3,11 @@ import Link from 'next/link'
   
 import {  
     VisuallyHidden,
-    Button,
     Box, 
-    useColorMode,
     useColorModeValue,
-    Text,
     Stack,
-    SocialButton,
     Center, 
     chakra,} from '@chakra-ui/react'
-import { getCategories } from '../services'
 import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 
 const Follow = () => {

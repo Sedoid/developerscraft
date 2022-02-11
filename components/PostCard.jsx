@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment';
 import Link from 'next/link';
-import { useColorMode, Flex,Badge, Box, Image, Container, Text, Stack, HStack, VStack,useColorModeValue } from '@chakra-ui/react'
+import { Flex,Badge, Box, Image, Container, Text, Stack, HStack, VStack,useColorModeValue } from '@chakra-ui/react'
 import { FaFileAudio } from 'react-icons/fa';
 
 const PostCard = ({post,index,category,content}) => {
