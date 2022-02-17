@@ -3,7 +3,7 @@ import Script from 'next/script'
 import { PostCard,Categories, PostWidget, Advertisement, Follow} from '../components'
 import { getPosts } from '../services'
 import { VisuallyHidden,Box, Input, InputRightElement, InputGroup, Button,useColorModeValue,Text, Stack, chakra, Flex, isTruncated, } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube, FaLinkedin,FaCogs,FaTractor,FaFutbol, FaMusic, FaGlobeAfrica, FaLanguage, FaHeartbeat } from 'react-icons/fa';
+import { FaCogs,FaFutbol, FaMusic, FaGlobeAfrica, FaLanguage, FaHeartbeat } from 'react-icons/fa';
 
 import { FeaturedPosts } from '../sections'
 

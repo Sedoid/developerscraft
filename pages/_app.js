@@ -44,10 +44,6 @@ function MyApp({ Component, pageProps }) {
         }}
       />
 
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951101662003064"
-              crossorigin="anonymous">
-      </Script>
-
       <ColorModeProvider
           options={{
           initialColorMode: "light",
