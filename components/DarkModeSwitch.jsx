@@ -11,12 +11,13 @@ const DarkModeSwitch = () =>{
         <IconButton 
             bg="transparent"
             aria-label="Toggle dark Mode"
-            icon={colorMode==='dark'? <SunIcon className='text-2xl'/>:<StarIcon className='text-2xl' />}
+            icon={colorMode==='dark'? <SunIcon className='text-2xl'/>:<StarIcon  />}
             onClick={toggleColorMode}
             className='hover:text-green-600 text-4xl'
             // style={{position:'absolute', top:'0px'}}
             id="darkMode"
             size="lg"
+            fontSize={23}
             color={iconColor[colorMode]}
         />
     )

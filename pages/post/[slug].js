@@ -16,6 +16,8 @@ const postDetails = ({post}) => {
                 <Head>
                     <title>{post.title}</title>
                     <link rel="icon" href="/favicon.ico" />
+                    <link rel="manifest" href='/manifest.json' />
+
                     <meta name="description" content={post.slug} />
 
 

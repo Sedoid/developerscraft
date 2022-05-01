@@ -9,11 +9,13 @@ import {
     Text,
     VisuallyHidden,
     Input,
+    Image,
     IconButton,
     useColorModeValue,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaWhatsapp, FaFacebook } from 'react-icons/fa';
+  import { FaInstagram, FaTwitter, FaYoutube , FaFacebook } from 'react-icons/fa';
   import { BiMailSend } from 'react-icons/bi';
+  import { Formik } from 'formik';
   
   const Logo = (props) => {
     return (
@@ -70,6 +72,7 @@ import {
 //   };
   
   export default function Footer() {
+    var sent_status = false
     return (
       <Box
         bg={useColorModeValue('green.700', 'gray.900')}
@@ -82,21 +85,20 @@ import {
               <Box>
                 {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
                 <Link href="/"> 
-                    <Text id="logo_title" className="cursor-pointer text-4xl">
-                        GreenLights
-                    </Text>
+                    <Image  className="cursor-pointer"  src = {useColorModeValue('/Logo_light.png', '/logo_dark.png')}  height={70} />
                 </Link>
+                
               </Box>
               <Text fontSize={'sm'}>
-                © 2022 Green Lights. All rights reserved
+                © 2022 Developers Craft. All rights reserved
               </Text>
               <Stack direction={'row'} spacing={6}>
                 <SocialButton label={'Twitter'} href={'https://twitter.com/IghtsGreen'}>
                   <FaTwitter/>
                 </SocialButton>
 
-                <SocialButton label={'Whatsapp'} href={'https://wa.me/+237654451039'}>
-                  <FaWhatsapp />
+                <SocialButton label={'Youtube'} href={'https://www.youtube.com/channel/UCBGOTbhDpNupOW0UM2IO3Ow'}>
+                    <FaYoutube/>
                 </SocialButton>
 
                 <SocialButton label={'Instagram'} href={'https://www.instagram.com/_greenlights__/'}>
@@ -112,7 +114,7 @@ import {
                 <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
                     Our Team
                 </Text>
-              <Link href={'#'}>About us</Link>
+              <Link href={'/about'}>About us</Link>
               
 
             </Stack>
@@ -120,35 +122,129 @@ import {
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
                     Support
                 </Text>
-              <Link href={'#'}>Contact us</Link>
+              <Link href={'/contact'}>Contact us</Link>
 
             </Stack>
             <Stack align={'flex-start'}>
                 <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
                     Stay Up to Date
                 </Text>
-              <Stack direction={'row'}>
-                <Input
-                  placeholder={'Your email address'}
-                  bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-                  border={0}
-                  _focus={{
-                    bg: 'whiteAlpha.300',
-                  }}
-                />
-                <IconButton
-                  bg={useColorModeValue('green.400', 'green.800')}
-                  color={useColorModeValue('white', 'gray.800')}
-                  _hover={{
-                    bg: 'green.600',
-                  }}
-                  aria-label="Subscribe"
-                  icon={<BiMailSend />}
-                />
-              </Stack>
+
+                  <Formik
+                    initialValues={{ email: ''}}
+                    validate={values => {
+                      const errors = {};
+                      if (!values.email) {
+                        errors.email = 'Required';
+                      } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                      ) {
+                        errors.email = 'Invalid Email';
+                      }
+                      return errors;
+                    }}
+                    onSubmit={(values, { setSubmitting }) => {
+
+                       
+                    fetch('http://gicmailer.herokuapp.com/',{
+                      method:'POST',
+                      body: JSON.stringify({
+                        email: values.email,
+                        to:'devscraft22@gmail.com',
+                        as:'subscriber'
+                      }),
+                      headers:{
+                        'Content-type':'application/json'
+                      }
+                    }).then(response => response.json())
+                    .then(json =>{
+                      console.log('******response arrived*****')
+                      if(json.status){
+                        document.getElementById("sent_status_success").style.display="block"
+                      }else{
+                        document.getElementById("sent_status_failed").style.display="block"
+                      }
+                      setTimeout(()=>{
+                        values.email = ""
+                        document.getElementById("sent_status_success").style.display="none"
+                        document.getElementById("sent_status_failed").style.display="none"
+
+                      },15000)
+                      
+                    }).catch(e =>{
+                      if(json.status){
+                        document.getElementById("sent_status_success").style.display="block"
+                      }else{
+                        document.getElementById("sent_status_failed").style.display="block"
+                      }
+                      setTimeout(()=>{
+                        values.email = ""
+                        document.getElementById("sent_status_success").style.display="none"
+                        document.getElementById("sent_status_failed").style.display="none"
+
+                      },15000)
+
+                    })
+
+                    }}
+                  >
+                    {({
+                      values,
+                      errors,
+                      touched,
+                      handleChange,
+                      handleBlur,
+                      handleSubmit,
+                      isSubmitting,
+                      /* and other goodies */
+                    }) => (
+                      <form onSubmit={handleSubmit}>
+                          <Stack direction={'row'}>   
+                            <Input
+                                placeholder={'Your email address'}
+                                bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+                                border={0}
+                                type="email"
+                                name='email'
+                                onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.email}
+                                _focus={{
+                                  bg: 'whiteAlpha.300',
+                                }}
+                              />
+
+                          {errors.email && touched.email && errors.email}
+                          {/* <button type="submit" disabled={isSubmitting}>
+                            Submit
+                          </button> */}
+                            <IconButton
+                              bg={useColorModeValue('green.400', 'green.800')}
+                              color={useColorModeValue('white', 'gray.800')}
+                              _hover={{
+                                bg: 'green.600',
+                              }}
+                              type="submit"
+                              disabled={isSubmitting}
+                              aria-label="Subscribe"
+                              icon={<BiMailSend />}
+                            />
+                    
+                          </Stack>
+                          <Text display="none" id="sent_status_success" fontStyle="bold">Thanks for Subscribing!</Text>
+                          <Text display="none" id="sent_status_failed" fontStyle="bold">Oops, operation failed, try again</Text>
+                      </form>
+                    )}
+                  </Formik>
+
             </Stack>
           </SimpleGrid>
         </Container>
       </Box>
     );
+  }
+
+
+  function sendMail(e){
+
   }

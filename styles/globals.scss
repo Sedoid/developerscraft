@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
-// @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Lobster&family=Roboto:wght@300;400;500&display=swap");
 
 @font-face {
   font-family: 'Cairo';
@@ -20,27 +17,34 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url(/fonts/roboto-black-webfont.woff);
-  src: url(/fonts/roboto-black-webfont.woff2);
-  src: url(/fonts/roboto-blackitalic-webfont.woff);
-  src: url(/fonts/roboto-blackitalic-webfont.woff2);
-  src: url(/fonts/roboto-medium.webfont.woff);
-  src: url(/fonts/roboto-medium.webfont.woff2);
-  src: url(/fonts/roboto-light.webfont.woff);
-  src: url(/fonts/roboto-light.webfont.woff2);
-  src: url(/fonts/roboto-regular.webfont.woff);
-  src: url(/fonts/roboto-regular.webfont.woff2);
-  src: url(/fonts/roboto-blackitalic.webfont.woff);
-  src: url(/fonts/roboto-blackitalic.webfont.woff2);
-  src: url(/fonts/roboto-italic.webfont.woff);
-  src: url(/fonts/roboto-italic.webfont.woff2);
-  src: url(/fonts/roboto-bold.webfont.woff);
-  src: url(/fonts/roboto-bold.webfont.woff2);
-  src: url(/fonts/roboto-black.webfont.woff);
-  src: url(/fonts/roboto-black.webfont.woff2);
+  src: url(/fonts/roboto-regular-webfont.woff);
+  // src: url(/fonts/roboto-light.webfont.woff2);  
+  // src: url(/fonts/roboto-black-webfont.woff);
+  // src: url(/fonts/roboto-blackitalic-webfont.woff);  
+  // src: url(/fonts/roboto-black-webfont.woff2);
+  // src: url(/fonts/roboto-blackitalic-webfont.woff2);
+  // src: url(/fonts/roboto-medium.webfont.woff);
+  // src: url(/fonts/roboto-medium.webfont.woff2);
+  // src: url(/fonts/roboto-light.webfont.woff);
 
+  // src: url(/fonts/roboto-regular.webfont.woff);
+  // src: url(/fonts/roboto-regular.webfont.woff2);
+  // src: url(/fonts/roboto-blackitalic.webfont.woff);
+  // src: url(/fonts/roboto-blackitalic.webfont.woff2);
+  // src: url(/fonts/roboto-italic.webfont.woff);
+  // src: url(/fonts/roboto-italic.webfont.woff2);
+  // src: url(/fonts/roboto-bold.webfont.woff);
+  // src: url(/fonts/roboto-bold.webfont.woff2);
+  // src: url(/fonts/roboto-black.webfont.woff);
+  // src: url(/fonts/roboto-black.webfont.woff2);
+
+  
 
 }
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+// @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Lobster&family=Roboto:wght@300;400;500&display=swap");
 
 
 html,
@@ -64,6 +68,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+Link:hover{
+
 }
 
 #logo_title{
@@ -117,6 +125,8 @@ a {
 
 #postcard_content, .follow_content{
   font-family: 'Roboto';
+  // line-height: 25px;
+  // word-spacing: 4px;
 }
 
 #blog{
@@ -135,16 +145,34 @@ a {
 }
 .badge, .author_name{
   font-family: 'Cairo', sans-serif;
+  font-size: 16px !important;
+}
+
+.postcard_author{
+  font-size: 16px !important;
+}
+
+#postcard_author_minor{
+  font-size: 16px !important;
+  font-family: 'Cairo';
 }
 
 .category{
   font-family: 'Cairo';
   cursor: 'pointer';
+  text-decoration: none;
+}
+
+.category:hover{
+  text-decoration: none !important;
+  
+  // color: red;
 }
 
 #postcard_author{
   font-size: 15px;
 }
+
 @media (max-width: 640px) {
 
   #header #top{
@@ -153,12 +181,12 @@ a {
     // padding-bottom: 2px;
   }
 
-  #darkMode{
-    position: absolute;
-    right: 0;
-    font-size: 10px;
-    // background-color: red;
-  }
+  // #darkMode{
+  //   position: absolute;
+  //   right: 0;
+  //   font-size: 10px;
+  // }
+
   #logo_title{
     font-family: 'Lobster', cursive;
     font-size: 24px;
@@ -196,4 +224,196 @@ a {
     font-family: 'Cairo', sans-serif;
     font-size: '19px';
   }
+}
+
+
+@media (min-width: 320px){
+
+  #about{
+
+    font-family: 'Roboto';
+      #about_name{
+        font-family: 'Cairo';
+        font-size: 33px;
+      }
+  
+      #about_i_am{
+        font-size: 21px;
+      }
+  
+      #about_i_write{
+        font-size: 21px;
+      }
+  
+      #craft{
+        background-color: #F56565;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 5px;
+        font-size: 35px;
+      }
+
+      #about_here_to{
+        font-size: 21px;
+      }
+  
+      #code{
+        font-size: 35px;
+      }
+    }
+  
+
+}
+
+
+@media (min-width: 600px) {
+
+    //  About Section
+    #about{
+
+      font-family: 'Roboto';
+        #about_name{
+          font-family: 'Cairo';
+          font-size: 50px;
+        }
+    
+        #about_i_am{
+          font-size: 30px;
+        }
+    
+        #about_i_write{
+          font-size: 30px;
+        }
+    
+        #about_here_to{
+          font-size: 30px;
+        }
+    
+        #craft{
+          background-color: #F56565;
+          padding-right: 10px;
+          padding-left: 10px;
+          border-radius: 5px;
+        }
+    
+        #code{}
+      }
+    
+
+}
+
+
+@media (min-width: 912px) {
+
+  #about{
+
+    font-family: 'Roboto';
+      #about_name{
+        font-family: 'Cairo';
+        font-size: 40px;
+      }
+  
+      #about_i_am{
+        font-size: 33px;
+        font-size: 30px;
+      }
+  
+      #about_i_write{
+        font-size: 45px;
+        font-size: 30px;
+      }
+  
+      #about_here_to{
+        font-size: 25px;
+      }
+  
+      #craft{
+        background-color: #F56565;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 5px;
+      }
+  
+      #code{}
+    }
+  
+
+
+}
+
+
+@media (min-width: 1024px) {
+
+
+  #about{
+
+    font-family: 'Roboto';
+      #about_name{
+        font-family: 'Cairo';
+        font-size: 65px;
+      }
+  
+      #about_i_am{
+        font-size: 45px;
+      }
+  
+      #about_i_write{
+        font-size: 45px;
+      }
+  
+      #about_here_to{
+        font-size: 40px;
+      }
+  
+      #craft{
+        background-color: #F56565;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 65px;
+        border-radius: 5px;
+      }
+  
+      #code{
+        font-size: 65px;
+      }
+    }
+  
+
+}
+
+
+@media (min-width: 1440px) {
+
+  //  About Section
+  #about{
+
+  font-family: 'Roboto';
+    #about_name{
+      font-family: 'Cairo';
+      font-size: 65px;
+    }
+
+    #about_i_am{
+      font-size: 45px;
+    }
+
+    #about_i_write{
+      font-size: 45px;
+    }
+
+    #about_here_to{
+      font-size: 40px;
+    }
+
+    #craft{
+      background-color: #F56565;
+      padding-right: 10px;
+      padding-left: 10px;
+      border-radius: 5px;
+    }
+
+    #code{}
+  }
+
+  
 }

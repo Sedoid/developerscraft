@@ -24,7 +24,7 @@ const Follow = () => {
             w={8}
             h={8}
             cursor={'pointer'}
-            as={'a'}
+            // as={'a'}
             href={href}
             display={'inline-flex'}
             alignItems={'center'}
@@ -53,19 +53,19 @@ const Follow = () => {
                 </Center>
                 <Stack direction={'row'} align="center" justifyContent="center" spacing={7}>
 
-                    <SocialButton label={'Twitter'} href={'https://twitter.com/IghtsGreen'}>
+                    <SocialButton label={'Twitter'} href={'/'}>
                     <FaTwitter style={{color:'#00acee'}}/>
                     </SocialButton>
 
-                    <SocialButton label={'Whatsapp'} href={'https://wa.me/+237654451039'}>
-                    <FaWhatsapp color='' style={{color:'#25D366'}} />
+                    <SocialButton label={'Youtube'} href={'https://www.youtube.com/channel/UCBGOTbhDpNupOW0UM2IO3Ow'}>
+                    <FaYoutube color='#fb3958' />
                     </SocialButton>
 
-                    <SocialButton label={'Instagram'} href={'https://www.instagram.com/_greenlights__/'}>
+                    <SocialButton label={'Instagram'} href={'/'}>
                     <FaInstagram style={{color:'#fb3958'}} />
                     </SocialButton>
 
-                    <SocialButton label={'Facebook'} href={'https://www.facebook.com/GreenLights-111635238105668'}>
+                    <SocialButton label={'Facebook'} href={'/'}>
                     <FaFacebook  style={{color:'#3b5998'}} />
                     </SocialButton> 
 

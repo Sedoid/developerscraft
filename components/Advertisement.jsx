@@ -16,7 +16,7 @@ const Advertisement = () => {
             <h5 className="text-xl mb-2 font-semibold border-b pb-1  sub_title">
                 Advertisement
             </h5>
-            <Box height="200px">
+            <Box height="100px">
 
             </Box>
         </Box>

@@ -1,8 +1,10 @@
 import React,{useEffect,useState} from 'react'
 import Link from 'next/link';
 import { getCategories } from '../services'
-import { Text,Container,Stack,Box,  useColorModeValue, Flex } from '@chakra-ui/react'
+import { Text,Container,Stack,Box,  useColorModeValue, Flex,Image, position } from '@chakra-ui/react'
 import DarkModeSwitch from './DarkModeSwitch';
+import { BsInfoCircle,BsEnvelope } from 'react-icons/bs';
+
 
 function Header() {
     const [categories,setCategories] = useState([])
@@ -18,27 +20,51 @@ function Header() {
         color={useColorModeValue('gray.50', 'gray.200')} id="header">
             <Container id="top"  as={Stack} maxH={64} maxW={'6xl'} pt={3} pb={3}>
                 
-                <div className="w-full inline-block">
+                <div className="w-full inline-block mt-3">
                    
-                    <Flex className="md:float-left block">
-                        <DarkModeSwitch />
-                        <Link href="/"> 
-                            <Text id="logo_title" className="cursor-pointer text-4xl">
-                                GreenLights
-                            </Text>
-                        </Link>                    
-                    </Flex>
+                    <Flex justifyContent="space-between">
+                        {/* <DarkModeSwitch /> */}
+                        <Link href="/" style={{position:"relative",left:"150px"}} className="cursor-pointer mini_title invisible sm:visible"> 
+                            <Image  src = {useColorModeValue('/mini_logo_light.png', '/mini_logo_dark.png')}  height={50} />
+                        </Link> 
 
-                    <div className="hidden md:float-left md:contents">
-                        {
+                        {/* <Link href="/" > 
+                            <Image  className="cursor-pointer invisible md:visible" src = {useColorModeValue('/Logo_light.png', '/logo_dark-removebg-preview.png')}  height={50} />
+                        </Link> 
+                        */}
+
+                    <Flex direction="row" className="position-relative md:float-left md:contents sm:contents sm:float-left" alignItems="center">
+                        {/* {
                             categories.map(category => 
                             <Link key={category.slug} href={`/category/${category.slug}`}>
                                 <Text className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer sub_title">
                                     {category.name}
                                 </Text>
                             </Link>)
-                        }
-                    </div> 
+                        } */}
+
+
+                        <Link href={`/about`}>
+                            <Text className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer sub_title">
+                                <BsInfoCircle />
+                            </Text>
+                        </Link>
+
+                        <Link href={`/contact`}>
+                                <Text className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer sub_title">
+                                    <BsEnvelope />
+                                </Text>
+                               
+                            </Link>
+
+                        <DarkModeSwitch />
+
+                    </Flex> 
+
+
+                    </Flex>
+
+                    {/* <div className="md:float-left md:contents sm:contents sm:float-left  mt-3"> */}
 
                         
                 </div>
@@ -50,7 +76,7 @@ function Header() {
                 color={useColorModeValue('gray.700', 'gray.200')}>
 
                 <Container textAlign="center"  py={7}  as={Stack} maxW={'6xl'} className=''>
-                <Text fontWeight="bold" fontSize="19px"  color="white" id="banner" className="capitalize">Learn Something New and Have Fun</Text>
+                <Text fontWeight="bold" fontSize="19px"  color="white" id="banner" className="capitalize">What developers Do and How they do it</Text>
                 </Container>                 
             </Box>
           

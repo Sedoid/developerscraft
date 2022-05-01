@@ -33,6 +33,11 @@ export const getPosts = async() =>{
               content{
                 raw
               }
+              topics{
+                name
+                id
+                slug
+              }
             }
           }
         }
@@ -96,6 +101,33 @@ export const getSimilarPosts = async(categories,slug) =>{
     return result.posts;
 }  
 
+export const getSimilarTopics = async(topic,slug) =>{
+  const query = gql`
+  query GetPostTopics($slug:String!, $topic:[String!]){
+      posts(
+          where: {slug_not: $slug, AND: {topics_some: { slug_in: $topic}}}
+          last: 3
+      ){
+          title
+          featuredImage{
+              url
+          }
+          featuredAudio{
+            url
+          }
+          createdAt
+          slug
+      }
+  }
+  `
+
+  const result = await request(graphqlAPI, query, {categories,slug});
+
+  return result.posts;
+}  
+
+
+
 export const getCategories = async() =>{
   const query = gql`
       query GetCategory{
@@ -109,6 +141,22 @@ export const getCategories = async() =>{
   const result = await request(graphqlAPI, query);
 
   return result.categories;
+}
+
+export const getTopics = async() =>{
+  const query = gql`
+      query GetTopics{
+        topics {
+          name
+          id
+          slug
+        }
+      }
+  `
+  
+  const result = await request(graphqlAPI, query);
+
+  return result.topics;
 }
 
 
@@ -141,6 +189,12 @@ export const getPostDetails = async(slug) =>{
           content{
             raw
           }
+          topics {
+            name
+            id
+            slug
+          }
+      
         }
       }
   `
@@ -235,6 +289,11 @@ export const getCategoryPost = async (slug) => {
               name
               slug
             }
+            topics {
+              name
+              id
+            }
+        
           }
         }
       }
@@ -245,3 +304,4 @@ export const getCategoryPost = async (slug) => {
 
   return result.postsConnection.edges;
 };
+

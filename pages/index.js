@@ -2,10 +2,11 @@ import Head from 'next/head'
 import Script from 'next/script'
 import { PostCard,Categories, PostWidget, Advertisement, Follow} from '../components'
 import { getPosts } from '../services'
-import { VisuallyHidden,Box, Input, InputRightElement, InputGroup, Button,useColorModeValue,Text, Stack, chakra, Flex, isTruncated, } from '@chakra-ui/react'
-import { FaCogs,FaFutbol, FaMusic, FaGlobeAfrica, FaLanguage, FaHeartbeat } from 'react-icons/fa';
+import { VisuallyHidden,Box, Input, InputRightElement, InputGroup, Button,useColorModeValue,Text, Stack, chakra, Flex, isTruncated, Link } from '@chakra-ui/react'
+import { FaServer,FaGamepad,FaApple,FaDesktop,FaCode, FaGlobeAfrica, FaPaintBrush, FaC } from 'react-icons/fa';
 
 import { FeaturedPosts } from '../sections'
+import Topics from '../components/Topics'
 
 export default function Home({posts}) {
 
@@ -21,7 +22,7 @@ export default function Home({posts}) {
         w={8}
         h={8}
         cursor={'pointer'}
-        as={'a'}
+        // as={'a'} 
         href={href}
         display={'inline-flex'}
         alignItems={'center'}
@@ -35,14 +36,16 @@ export default function Home({posts}) {
       </chakra.button>
     );
   };
+  
   return (
     
     <div className="container mx-auto  pb-8">
       <Head>
-        <title>Green Lights</title>
+        <title>Developers Craft</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
         <link rel="canonical" href="https://thegreenlights.net" />
+        <link rel="manifest" href='/manifest.json' />
 
         <meta property="og:type" content="website" />
 
@@ -84,73 +87,86 @@ export default function Home({posts}) {
       {/* Popular Search Section */}
       <Flex   mb={8}>
         <Text id="popular_searches" className='xs:hidden md:block'   flexGrow={1}>
-          Popular Searches: 
+          Categories: 
         </Text>
         <Box flexGrow={6} >
           <Stack direction={'row'} justifyContent="space-between"  align="center" mb={5} >
 
                 <Box maxW="30%" flexGrow={1}>
-                  <Text className='category' isTruncated textAlign="start">
-                    <SocialButton label={'Twitter'}  href={'#'}>
-                    <FaCogs color="" />
-                    </SocialButton>  
-                     &nbsp;Technology            
+                  <Text className='category transition duration-700 cursor-pointer hover:text-green-600' noOfLines = {1} textAlign="start">
+                    <Link href="./category/ui-ux-design">          
+                      <SocialButton label={'Twitter'}  href={'./category/ui-ux-design'}>
+                      <FaPaintBrush color="" />
+                      </SocialButton>  
+                      &nbsp;UI/UX Design
+                     </Link>            
                   </Text>
                 </Box>
 
 
                 <Box  maxW="30%" flexGrow={1}>
-                <Text className='category' flexGrow={1}  textAlign="start"  isTruncated>
-                  <SocialButton label={'YouTube'} href={'#'}>
-                  <FaLanguage color='' />
-                  </SocialButton>   
-                  &nbsp;Pidgin          
+                <Text className='category transition duration-700 cursor-pointer hover:text-green-600' flexGrow={1}  textAlign="start"  noOfLines = {1}>
+                  <Link href="./category/web-development">          
+                    <SocialButton label={'YouTube'} href={'./category/web-development'}>
+                    <FaGlobeAfrica color='' />
+                    </SocialButton>   
+                    &nbsp;Web Development
+                  </Link>       
                 </Text>
 
                 </Box>
 
 
                 <Box  maxW="30%" flexGrow={1}>
-                <Text className='category'  textAlign="start"  isTruncated >
-                  <SocialButton label={'Instagram'} href={'#'}>
-                  <FaGlobeAfrica color='' />
-                  </SocialButton>    
-                  &nbsp;Culture
+                <Text className='category transition duration-700 cursor-pointer hover:text-green-600'  textAlign="start"  noOfLines = {1} >
+                  <Link href="./category/backend-architecture">
+                    <SocialButton label={'Instagram'} href={'./category/backend-architecture'}>
+                    <FaServer color='' />
+                    </SocialButton>    
+                    &nbsp;Backend Architectures                    
+                  </Link>
                 </Text>
                 </Box>
-
 
           </Stack>
 
           <Stack direction={'row'}  justifyContent="space-between"  align="center">
 
           <Box   maxW="30%"  flexGrow={1}>
-          <Text className='category'  textAlign="start"   isTruncated flexGrow={1}>
-              <SocialButton label={'Instagram'} href={'#'}>
-              <FaHeartbeat color='' />
-              </SocialButton>  
-              &nbsp;Health
+          <Text className='category transition duration-700 cursor-pointer hover:text-green-600'  textAlign="start"   noOfLines = {1} flexGrow={1}>
+            <Link href="./category/game-development">
+                <SocialButton label={'Instagram'} href={'./category/game-development'}>
+                <FaGamepad color='' />
+                </SocialButton>  
+                &nbsp;Game Development       
+            </Link>
           </Text>
           </Box>
 
 
           <Box  maxW="30%"  flexGrow={1}>
-          <Text className='category'  textAlign="start"   isTruncated flexGrow={1} >
-            <SocialButton label={'Twitter'} href={'#'}>
-            <FaFutbol color="" />
-            </SocialButton>  
-            &nbsp;Sports      
+          <Text className='category transition duration-700 cursor-pointer hover:text-green-600'  textAlign="start"   noOfLines = {1} flexGrow={1} >
+            <Link href="./category/app-development">
+              <SocialButton label={'sports'} href={'./category/app-development'}>
+              <FaApple color="" />
+              </SocialButton>  
+              &nbsp;App Develpment             
+            </Link>
+     
           </Text>
             
           </Box>
 
 
           <Box maxW="30%"  flexGrow={1}>
-          <Text className='category'  textAlign="start"   isTruncated>
-              <SocialButton label={'YouTube'} href={'#'}>
-              <FaMusic color='' />
+          <Text textAlign="start" className="category transition duration-700 cursor-pointer hover:text-green-600"   noOfLines = {1}>
+            <Link textDecoration="none" href="./category/programming-concepts">
+              <SocialButton label={'finance'} href={'./category/programming-concepts'} >
+              <FaCode color='' />
               </SocialButton> 
-              &nbsp; Music 
+              &nbsp; Programming Concepts             
+            </Link>
+
           </Text>        
           </Box>
 
@@ -169,10 +185,11 @@ export default function Home({posts}) {
 
         {/* side section for categories and stuffs */}
           <div className="lg:col-span-4 col-span-1">
-            <div className="lg:sticky relative top-8">
-              <Follow />
-              <Categories />
+            <div className="lg:sticky relative top-8">      
               <Advertisement/>
+              <Follow />
+              <Topics />
+              <Categories />
               {/* <PostWidget /> */}
             </div>
           </div>
