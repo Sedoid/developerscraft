@@ -64,7 +64,7 @@
     ],
     "shortcuts": [],
     "start_url": "/",
-    "background_color": "#F7FAFC",
+    "background_color": "#000000",
     "display": "standalone",
     "scope": "/",
     "theme_color": "#38A169"

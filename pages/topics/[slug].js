@@ -1,0 +1,99 @@
+import React from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head'
+import Script from 'next/script'
+import { getCategories, getCategoryPost } from '../../services';
+import { PostCard, Categories, Loader } from '../../components';
+import { Box, Header, Text,Flex, useColorModeValue } from '@chakra-ui/react';
+
+const CategoryPost = ({ posts }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
+
+  return (
+    <div className="container mx-auto px-md-10 mb-8">
+        <Head>
+        <title>Developers Craft </title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href='/manifest.json' />
+
+        <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
+        <link rel="canonical" href="https://thegreenlights.net" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:title" content="GreenLights" />
+
+        <meta property="og:description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
+
+        <meta property="og:image" content="https://thegreenlights.net/favicon.ico" />
+
+        <meta property="og:url" content="https://thegreenlights.net" />
+
+        <meta property="og:site_name" content="GreenLights" />
+
+
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951101662003064"
+        crossorigin="anonymous">
+        </Script>
+      </Head>
+      <Box>
+        
+        <Flex direction="row" align="center"  style={{marginTop: '3em'}}>
+          <Text
+          bg={useColorModeValue('gray.50', 'gray.900')}
+          color={useColorModeValue('gray.700', 'gray.200')
+          }
+          fontWeight="semibold"
+          marginRight = {3}
+          id="recent"
+          >{posts.name} Articles ({posts.length})</Text>
+          <Box flexGrow="1"  height="1px" bg="gray.300"></Box>
+      </Flex> 
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+
+     
+
+        <div className="col-span-1 lg:col-span-8">
+          
+          {!posts.length ? "No Articles Available": ""}
+          {posts.map((post, index) => (
+            <PostCard key={index} post={post.node} />
+          ))}
+        </div>
+        <div className="col-span-1 lg:col-span-4">
+          <div className="relative lg:sticky top-8">
+            <Categories />
+          </div>
+        </div>
+      </div> 
+      </Box>
+
+    </div>
+  );
+};
+export default CategoryPost;
+
+// Fetch data at build time
+export async function getStaticProps({ params }) {
+  const posts = await getCategoryPost(params.slug);
+
+  return {
+    props: { posts },
+  };
+}
+
+// Specify dynamic routes to pre-render pages based on data.
+// The HTML is generated at build time and will be reused on each request.
+export async function getStaticPaths() {
+  const categories = await getCategories();
+  return {
+    paths: categories.map(({ slug }) => ({ params: { slug } })),
+    fallback: true,
+  };
+}
