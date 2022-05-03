@@ -44,20 +44,21 @@ export default function Home({posts}) {
         <title>Developers Craft</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
-        <link rel="canonical" href="https://thegreenlights.net" />
-        <link rel="manifest" href='/manifest.json' />
+        <link rel="canonical" href="https://developerscraft.com" />
+        <link rel="manifest" href='/manifest.json' />  
+        <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
         <meta property="og:type" content="website" />
 
-        <meta property="og:title" content="GreenLights" />
+        <meta property="og:title" content="Developers Craft" />
 
         <meta property="og:description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
 
-        <meta property="og:image" content="https://thegreenlights.net/favicon.ico" />
+        <meta property="og:image" content="https://developerscraft.com/favicon.ico" />
 
-        <meta property="og:url" content="https://thegreenlights.net" />
+        <meta property="og:url" content="https://developerscraft.com" />
 
-        <meta property="og:site_name" content="GreenLights" />
+        <meta property="og:site_name" content="Developers Craft" />
 
 
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951101662003064"

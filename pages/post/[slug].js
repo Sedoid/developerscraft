@@ -16,7 +16,8 @@ const postDetails = ({post}) => {
                 <Head>
                     <title>{post.title}</title>
                     <link rel="icon" href="/favicon.ico" />
-                    <link rel="manifest" href='/manifest.json' />
+                    <link rel="manifest" href='/manifest.json' />  
+                    <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
                     <meta name="description" content={post.slug} />
 
@@ -29,9 +30,9 @@ const postDetails = ({post}) => {
 
                     <meta property="og:image" content={post.featuredImage?.url} />
 
-                    <meta property="og:url" content={"https://thegreenlights.net/post/"+post.featuredImagetitle} />
+                    <meta property="og:url" content={"https://developerscraft.com/post/"+post.featuredImagetitle} />
 
-                    <meta property="og:site_name" content="https://thegreenlights.net" />
+                    <meta property="og:site_name" content="https://developerscraft.com" />
 
 
 

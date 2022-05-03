@@ -85,7 +85,7 @@ import {
               <Box>
                 {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
                 <Link href="/"> 
-                    <Image  className="cursor-pointer"  src = {useColorModeValue('/Logo_light.png', '/logo_dark.png')}  height={70} />
+                    <Image  className="cursor-pointer" alt="Developers Craft Logo"  src = {useColorModeValue('/Logo_light.png', '/logo_dark.png')}  height={70} />
                 </Link>
                 
               </Box>
@@ -93,7 +93,7 @@ import {
                 © 2022 Developers Craft. All rights reserved
               </Text>
               <Stack direction={'row'} spacing={6}>
-                <SocialButton label={'Twitter'} href={'https://twitter.com/IghtsGreen'}>
+                <SocialButton label={'Twitter'} href={'/'}>
                   <FaTwitter/>
                 </SocialButton>
 
@@ -101,17 +101,17 @@ import {
                     <FaYoutube/>
                 </SocialButton>
 
-                <SocialButton label={'Instagram'} href={'https://www.instagram.com/_greenlights__/'}>
+                <SocialButton label={'Instagram'} href={'/'}>
                   <FaInstagram />
                 </SocialButton>
 
-                <SocialButton label={'Facebook'} href={'https://www.facebook.com/GreenLights-111635238105668'}>
+                <SocialButton label={'Facebook'} href={'/'}>
                   <FaFacebook />
                 </SocialButton> 
               </Stack>
             </Stack>
             <Stack align={'flex-start'}>
-                <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+                <Text fontWeight={'500'} fontSize={'md'} mb={2}>
                     Our Team
                 </Text>
               <Link href={'/about'}>About us</Link>
@@ -119,14 +119,14 @@ import {
 
             </Stack>
             <Stack align={'flex-start'}>
-            <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+            <Text fontWeight={'500'} fontSize={'md'} mb={2}>
                     Support
                 </Text>
               <Link href={'/contact'}>Contact us</Link>
 
             </Stack>
             <Stack align={'flex-start'}>
-                <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+                <Text fontWeight={'500'} fontSize={'md'} mb={2}>
                     Stay Up to Date
                 </Text>
 

@@ -25,7 +25,7 @@ function Header() {
                     <Flex justifyContent="space-between">
                         {/* <DarkModeSwitch /> */}
                         <Link href="/" style={{position:"relative",left:"150px"}} className="cursor-pointer mini_title invisible sm:visible"> 
-                            <Image  src = {useColorModeValue('/mini_logo_light.png', '/mini_logo_dark.png')}  height={50} />
+                            <Image  src = {useColorModeValue('/mini_logo_light.png', '/mini_logo_dark.png')} alt="Developers Craft Logo"  height={50} />
                         </Link> 
 
                         {/* <Link href="/" > 

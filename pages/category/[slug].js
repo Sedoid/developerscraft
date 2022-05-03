@@ -6,7 +6,7 @@ import { getCategories, getCategoryPost } from '../../services';
 import { PostCard, Categories, Loader } from '../../components';
 import { Box, Header, Text,Flex, useColorModeValue } from '@chakra-ui/react';
 
-const CategoryPost = ({ posts }) => {
+const CategoryPost = ({ posts , categoryName }) => {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -18,29 +18,33 @@ const CategoryPost = ({ posts }) => {
         <Head>
         <title>Developers Craft </title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href='/manifest.json' />
+        <link rel="manifest" href='/manifest.json' />  
+        <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
         <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
-        <link rel="canonical" href="https://thegreenlights.net" />
+        <link rel="canonical" href="https://developerscraft.com" />
 
         <meta property="og:type" content="website" />
 
-        <meta property="og:title" content="GreenLights" />
+        <meta property="og:title" content="Developers Craft" />
 
         <meta property="og:description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
 
-        <meta property="og:image" content="https://thegreenlights.net/favicon.ico" />
+        <meta property="og:image" content="https://developerscraft.com/favicon.ico" />
 
-        <meta property="og:url" content="https://thegreenlights.net" />
+        <meta property="og:url" content="https://developerscraft.com" />
 
-        <meta property="og:site_name" content="GreenLights" />
+        <meta property="og:site_name" content="Developers Craft" />
 
 
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951101662003064"
         crossorigin="anonymous">
         </Script>
       </Head>
-      <Box>
+      <Box
+        bg={useColorModeValue('grey.900', 'gray.900')}
+        color={useColorModeValue('gray.700', 'gray.200')}
+      >
         
         <Flex direction="row" align="center"  style={{marginTop: '3em'}}>
           <Text
@@ -50,7 +54,7 @@ const CategoryPost = ({ posts }) => {
           fontWeight="semibold"
           marginRight = {3}
           id="recent"
-          >{posts.name} Articles ({posts.length})</Text>
+          >{categoryName} Articles ({posts.length})</Text>
           <Box flexGrow="1"  height="1px" bg="gray.300"></Box>
       </Flex> 
 
@@ -63,10 +67,15 @@ const CategoryPost = ({ posts }) => {
           
           {!posts.length ? "No Articles Available": ""}
           {posts.map((post, index) => (
-            <PostCard key={index} post={post.node} />
+            <Box key={index}>
+              <br />
+              <PostCard post={post.node} />
+            </Box>
+            
           ))}
         </div>
         <div className="col-span-1 lg:col-span-4">
+          <br />
           <div className="relative lg:sticky top-8">
             <Categories />
           </div>
@@ -82,9 +91,17 @@ export default CategoryPost;
 // Fetch data at build time
 export async function getStaticProps({ params }) {
   const posts = await getCategoryPost(params.slug);
+  var categoryName = params.slug 
+  if(params.slug == "app-development") categoryName = " App Development" 
+  else if(params.slug == "ui-ux-design") categoryName = "UI/UX Development" 
+  else if(params.slug == "web-development") categoryName = "Web Development" 
+  else if(params.slug == "backend-architecture") categoryName = "Backend Architecture" 
+  else if(params.slug == "game-development") categoryName ="Game Development" 
+  else if(params.slug == "app-development") categoryName = "App Development" 
+  else if(params.slug == "programming-concepts") categoryName ="Programming Concepts"
 
   return {
-    props: { posts },
+    props: { posts, categoryName },
   };
 }
 
