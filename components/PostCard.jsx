@@ -69,12 +69,12 @@ const PostCard = ({post,index,category,content}) => {
                                     <Text className='' fontWeight="semibold" fontStyle="italic">No Audio Track Available<br /> </Text> 
                                     }
                                     
-                                                        
-                                    {post.content.raw?.children[0].children[0].text}<br />
-                                    {post.content.raw?.children[1].children[0].text}<br />
-                                    {post.content.raw?.children[2].children[0].text}<br />
-                                    {post.content.raw?.children[3].children[0].text}
-                                    
+                                    <Text id="recent_post_text">       
+                                        {post.content.raw?.children[0].children[0].text}<br />
+                                        {post.content.raw?.children[1].children[0].text}<br />
+                                        {post.content.raw?.children[2].children[0].text}<br />
+                                        {post.content.raw?.children[3].children[0].text}
+                                    </Text>    
                                 </Box> 
 
                                 <div className="text-center">
@@ -82,7 +82,7 @@ const PostCard = ({post,index,category,content}) => {
                                     {/* <span className="transition duraion-500 transform hover:-translate-y-1 inline-block bg-green-700 text-sm font-medium rounded-full text-white px-3 py-2 cursor-pointer"> Continue Reading... </span> */}
                                     <Button
                                         rounded={'full'}
-                                        size={'sm'}
+                                        size={'md'}
                                         fontWeight={'normal'}
                                         px={6}
                                         colorScheme={'green'}
@@ -173,21 +173,24 @@ const PostCard = ({post,index,category,content}) => {
                         </Text> 
                     
                     <Text noOfLines={2} id="postcared_content">{post.excerpt}</Text> 
-                    <Stack direction="row" id="postcard_details" spacing="10px" align="center">
-                        <Text fontSize="sm">{moment(post.createdAt).format('MMM DD')}</Text>
-                        <FaFileAudio style={{display:post.featuredAudio?.url? "block": "none"}} />
+                    <Box mt={5} id="postcard_details" spacing="10px" className='w-full' align="left" bg="transparent">
+                                    <span>{moment(post.createdAt).format('MMM DD')}<FaFileAudio className='mr-5 ml-2' style={{display:post.featuredAudio?.url? "inline-block": "none"}}  /></span>
+                                    {
+                                        post.categories.map(category => 
+                                            <Badge  key={category.slug}   ml='1' colorScheme='blue' style={{fontSize:"12px"}} paddingX={3} paddingY={1}  rounded= "base" className='rounded-md'>
+                                                {category.name}
+                                            </Badge>                                        
+                                        )
+                                    }
 
-                        {
-                            post.categories.map(category => 
-                            <Text  key={category.slug} fontSize="sm" ml={2}>
-                                <Badge ml='1' colorScheme='green' style={{fontSize:"10px"}} paddingX={3} paddingY={1}  rounded={'full'} className='rounded-md badge'>
-                                    {category.name}
-                                </Badge>
-                            </Text>
-                            
-                            )
-                        }
-                    </Stack>                
+                                    {
+                                        post.topics.map(topic => 
+                                            <Badge key={topic.slug}  ml='1' colorScheme='green' style={{fontSize:"10px"}} paddingX={3} paddingY={1}  rounded={'full'} className='rounded-md'>
+                                                {topic.name}
+                                            </Badge>
+                                        )
+                                    }
+                                </Box>               
                 </VStack> 
 
                     <div style={{

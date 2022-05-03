@@ -17,6 +17,7 @@ const CategoryPost = ({ posts , categoryName }) => {
     <div className="container mx-auto px-md-10 mb-8">
         <Head>
         <title>Developers Craft </title>
+        <html lang="en" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href='/manifest.json' />  
         <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />

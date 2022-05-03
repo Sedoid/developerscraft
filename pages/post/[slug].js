@@ -15,18 +15,19 @@ const postDetails = ({post}) => {
         <div>
                 <Head>
                     <title>{post.title}</title>
+                    <html lang="en" />
                     <link rel="icon" href="/favicon.ico" />
                     <link rel="manifest" href='/manifest.json' />  
                     <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
-                    <meta name="description" content={post.slug} />
+                    <meta name="description" content={post.excerpt} />
 
 
                     <meta property="og:type" content="article" />
 
                     <meta property="og:title" content={post.title} />
 
-                    <meta property="og:description" content={post.slug} />
+                    <meta property="og:description" content={post.excerpt} />
 
                     <meta property="og:image" content={post.featuredImage?.url} />
 
