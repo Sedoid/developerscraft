@@ -228,6 +228,14 @@ a {
 
 
 @media (min-width: 320px){
+  #banner{
+    font-size: 16px
+  }
+
+  #banner-container{
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
 
   #about{
 
@@ -267,6 +275,10 @@ a {
 
 
 @media (min-width: 600px) {
+
+  #banner{
+    font-size: 19px
+  }
 
     //  About Section
     #about{

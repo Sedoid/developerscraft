@@ -82,12 +82,11 @@ const PostCard = ({post,index,category,content}) => {
                                     {/* <span className="transition duraion-500 transform hover:-translate-y-1 inline-block bg-green-700 text-sm font-medium rounded-full text-white px-3 py-2 cursor-pointer"> Continue Reading... </span> */}
                                     <Button
                                         rounded={'full'}
-                                        size={'md'}
+                                        size={'sm'}
                                         fontWeight={'normal'}
                                         px={6}
-                                        colorScheme={'red'}
-                                        bg={'green.400'}
-                                        _hover={{ bg: 'green.600' }}>
+                                        colorScheme={'green'}
+                                        >
                                         Continue Reading...
                                     </Button>
                                     </Link>

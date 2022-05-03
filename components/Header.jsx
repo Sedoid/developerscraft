@@ -75,7 +75,7 @@ function Header() {
                 bg={useColorModeValue('green.500', 'green.500')}
                 color={useColorModeValue('gray.700', 'gray.200')}>
 
-                <Container textAlign="center"  py={7}  as={Stack} maxW={'6xl'} className=''>
+                <Container textAlign="center"  py={7} id="banner-container"  as={Stack} maxW={'6xl'} className=''>
                 <Text fontWeight="bold" fontSize="19px"  color="white" id="banner" className="capitalize">What developers Do and How they do it</Text>
                 </Container>                 
             </Box>

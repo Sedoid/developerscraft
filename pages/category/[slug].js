@@ -46,7 +46,7 @@ const CategoryPost = ({ posts , categoryName }) => {
         color={useColorModeValue('gray.700', 'gray.200')}
       >
         
-        <Flex direction="row" align="center"  style={{marginTop: '3em'}}>
+        <Flex direction="row" align="center">
           <Text
           bg={useColorModeValue('gray.50', 'gray.900')}
           color={useColorModeValue('gray.700', 'gray.200')
@@ -54,7 +54,7 @@ const CategoryPost = ({ posts , categoryName }) => {
           fontWeight="semibold"
           marginRight = {3}
           id="recent"
-          >{categoryName} Articles ({posts.length})</Text>
+          >{categoryName}({posts.length})</Text>
           <Box flexGrow="1"  height="1px" bg="gray.300"></Box>
       </Flex> 
 

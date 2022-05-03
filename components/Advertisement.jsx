@@ -1,8 +1,6 @@
 import React,{useState,useEffect} from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
 import {Button,Box, useColorMode,useColorModeValue} from '@chakra-ui/react'
-import { getCategories } from '../services'
+import Loader from './Loader'
 
 const Advertisement = () => {
 
@@ -17,7 +15,7 @@ const Advertisement = () => {
                 Advertisement
             </h5>
             <Box height="100px">
-
+                <Loader/>
             </Box>
         </Box>
     )
