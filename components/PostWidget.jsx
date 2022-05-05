@@ -22,7 +22,7 @@ const PostWidget = ({categories,slug}) => {
         <Box
         bg={useColorModeValue('grey.900', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}
-        key={slug} className="bg-white shadow-lg rounded-md p-5 mb-8 borderWidth='1px' borderRadius='md'">
+        key={slug} className=" shadow-lg rounded-md p-5 mb-8 borderWidth='1px' borderRadius='md'">
             <h4 className="text-xl mb-2 font-semibold border-b pb-2">
                 {slug ? 'Related Post' : "Recent Posts"}
             </h4>

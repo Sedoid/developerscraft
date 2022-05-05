@@ -51,8 +51,9 @@ const CommentForm = ({slug}) => {
 
     return (
         <Box 
-        bg={useColorModeValue('grey.900', 'gray.900')}
-        className={useColorModeValue('light_shadow bg-white shadow-lg rounded-lg p-8 pb-12 mb-8','dark_shadow bg-white shadow-lg rounded-lg p-8 pb-12 mb-8')}
+        
+        bg={useColorModeValue('white', 'gray.900')}
+        className={useColorModeValue('light_shadow shadow-lg rounded-lg p-8 pb-12 mb-8','dark_shadow  shadow-lg rounded-lg p-8 pb-12 mb-8')}
         color={useColorModeValue('gray.700', 'gray.400')}
           borderWidth='1px' borderRadius='md'>
             <h1 className="text-xl mb-8 font-semibold border-b pb-4">Leave a Reply</h1>

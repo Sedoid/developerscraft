@@ -26,7 +26,7 @@ function Header() {
                         {/* <DarkModeSwitch /> */}
                         
                         <Link href="/" grow={1} style={{position:"relative",left:"150px"}} bg={'white'} className="cursor-pointer mini_title invisible sm:visible"> 
-                            <Image  src = {useColorModeValue('/mini_logo_light.png', '/mini_logo_dark.png')} alt="Developers Craft Logo"  height={50} />
+                            <Image  src = {useColorModeValue('/mini_logo_light.png', '/mini_logo_dark.png')} alt="Developers Craft Logo"  height={50} width="inherit" />
                         </Link> 
 
                         {/* <Link href="/" > 

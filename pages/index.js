@@ -81,7 +81,13 @@ export default function Home({posts}) {
           className='rounded-md'
         />
         <InputRightElement width='6rem' className='position-relative'>
-          <Button colorScheme={'green'} color="white" mt={5}  mr={5} p={5} size='md'>
+          <Button 
+          bg={useColorModeValue('green.500', 'green.500')}
+          color={useColorModeValue('white', 'white')}
+          mt={5}  
+          mr={5} 
+          p={5} 
+          size='md'>
             Search
           </Button>
         </InputRightElement>

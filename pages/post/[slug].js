@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
-import {Box} from '@chakra-ui/react'
+import {Box,useColorModeValue} from '@chakra-ui/react'
 import {getPosts,getPostDetails} from '../../services'
 import { useRouter } from 'next/dist/client/router'
 import {Comments,CommentForm,PostDetail,PostWidget,Author,Categories,Loader,Advertisement} from '../../components'
@@ -43,7 +43,7 @@ const postDetails = ({post}) => {
                     </Script>
                 </Head>
       
-            <Box className="container mx-auto px-lg-10 px-0 py-2 mb-8">
+            <div className="container mx-auto px-lg-10 px-0 py-0 mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <div className="col-span-1 lg:col-span-8">
                         <PostDetail post={post} />
@@ -59,7 +59,7 @@ const postDetails = ({post}) => {
                         </div>
                     </div>
                 </div>
-            </Box>          
+            </div>          
         </>
     )
 }

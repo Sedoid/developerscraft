@@ -85,7 +85,7 @@ import {
               <Box>
                 {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
                 <Link href="/"> 
-                    <Image  className="cursor-pointer" alt="Developers Craft Logo"  src = {useColorModeValue('/Logo_light.png', '/logo_dark.png')}  height={70} />
+                    <Image  className="cursor-pointer" alt="Developers Craft Logo"  src = {useColorModeValue('/Logo_light.png', '/logo_dark.png')}  height={70} width="inherit" />
                 </Link>
                 
               </Box>

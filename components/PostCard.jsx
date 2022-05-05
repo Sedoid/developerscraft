@@ -85,7 +85,8 @@ const PostCard = ({post,index,category,content}) => {
                                         size={'md'}
                                         fontWeight={'normal'}
                                         px={6}
-                                        colorScheme={'green'}
+                                        bg={useColorModeValue('green.500', 'green.500')}
+                                        color={useColorModeValue('white', 'white')}
                                         >
                                         Continue Reading...
                                     </Button>
