@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import Link from 'next/link';
 import { getCategories } from '../services'
-import { Text,Container,Stack,Box,  useColorModeValue, Flex,Image, position } from '@chakra-ui/react'
+import { Text,Container,Stack,Box,  useColorModeValue, Flex,Image, position, Spacer } from '@chakra-ui/react'
 import DarkModeSwitch from './DarkModeSwitch';
 import { BsInfoCircle,BsEnvelope } from 'react-icons/bs';
 
@@ -22,9 +22,10 @@ function Header() {
                 
                 <div className="w-full inline-block mt-3">
                    
-                    <Flex justifyContent="space-between">
+                    <Flex justifyContent="space-between" alignItems={'center'}>
                         {/* <DarkModeSwitch /> */}
-                        <Link href="/" style={{position:"relative",left:"150px"}} className="cursor-pointer mini_title invisible sm:visible"> 
+                        
+                        <Link href="/" grow={1} style={{position:"relative",left:"150px"}} bg={'white'} className="cursor-pointer mini_title invisible sm:visible"> 
                             <Image  src = {useColorModeValue('/mini_logo_light.png', '/mini_logo_dark.png')} alt="Developers Craft Logo"  height={50} />
                         </Link> 
 
@@ -32,8 +33,9 @@ function Header() {
                             <Image  className="cursor-pointer invisible md:visible" src = {useColorModeValue('/Logo_light.png', '/logo_dark-removebg-preview.png')}  height={50} />
                         </Link> 
                         */}
+                        <Spacer />
 
-                    <Flex direction="row" className="position-relative md:float-left md:contents sm:contents sm:float-left" alignItems="center">
+                    <Flex direction="row"  className="position-relative md:contents sm:contents " alignItems="center">
                         {/* {
                             categories.map(category => 
                             <Link key={category.slug} href={`/category/${category.slug}`}>
@@ -45,13 +47,13 @@ function Header() {
 
 
                         <Link href={`/about`}>
-                            <Text className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer sub_title">
+                            <Text className=" mt-2 align-middle mx-1.5 font-semibold cursor-pointer sub_title">
                                 <BsInfoCircle />
                             </Text>
                         </Link>
 
                         <Link href={`/contact`}>
-                                <Text className="md:float-right mt-2 align-middle ml-4 font-semibold cursor-pointer sub_title">
+                                <Text className=" mt-2 align-middle mx-1.5 font-semibold cursor-pointer sub_title">
                                     <BsEnvelope />
                                 </Text>
                                

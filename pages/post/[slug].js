@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import {Box} from '@chakra-ui/react'
 import {getPosts,getPostDetails} from '../../services'
 import { useRouter } from 'next/dist/client/router'
 import {Comments,CommentForm,PostDetail,PostWidget,Author,Categories,Loader,Advertisement} from '../../components'
@@ -12,22 +13,22 @@ const postDetails = ({post}) => {
         return <Loader />
     }
     return (
-        <div>
+        <>
                 <Head>
                     <title>{post.title}</title>
-                    {/* <html lang="en" /> */}
+                    <html lang="en" />
                     <link rel="icon" href="/favicon.ico" />
                     <link rel="manifest" href='/manifest.json' />  
                     <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
-                    <meta name="description" content={post.slug} />
+                    <meta name="description" content={post.excerpt} />
 
 
                     <meta property="og:type" content="article" />
 
                     <meta property="og:title" content={post.title} />
 
-                    <meta property="og:description" content={post.slug} />
+                    <meta property="og:description" content={post.excerpt} />
 
                     <meta property="og:image" content={post.featuredImage?.url} />
 
@@ -42,7 +43,7 @@ const postDetails = ({post}) => {
                     </Script>
                 </Head>
       
-            <div className="container mx-auto px-lg-10 px-5 py-5 mb-8">
+            <Box className="container mx-auto px-lg-10 px-0 py-2 mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <div className="col-span-1 lg:col-span-8">
                         <PostDetail post={post} />
@@ -58,8 +59,8 @@ const postDetails = ({post}) => {
                         </div>
                     </div>
                 </div>
-            </div>          
-        </div>
+            </Box>          
+        </>
     )
 }
 

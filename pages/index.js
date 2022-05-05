@@ -42,11 +42,11 @@ export default function Home({posts}) {
     <div className="container mx-auto  pb-8">
       <Head>
         <title>Developers Craft</title>
-        {/* <html lang="en" /> */}
+        <html lang="en" style={{margin: 0,padding:0}} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://developerscraft.com" />
         <link rel="manifest" href='/manifest.json' /> 
-
+               
         <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
   
         <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
@@ -80,7 +80,7 @@ export default function Home({posts}) {
           height={70}
           className='rounded-md'
         />
-        <InputRightElement width='6rem' className='position-relative top-10'>
+        <InputRightElement width='6rem' className='position-relative'>
           <Button colorScheme={'green'} color="white" mt={5}  mr={5} p={5} size='md'>
             Search
           </Button>
