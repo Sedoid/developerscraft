@@ -15,6 +15,7 @@ const postDetails = ({post}) => {
         <div>
                 <Head>
                     <title>{post.title}</title>
+                    {/* <html lang="en" /> */}
                     <link rel="icon" href="/favicon.ico" />
                     <link rel="manifest" href='/manifest.json' />  
                     <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
@@ -41,7 +42,7 @@ const postDetails = ({post}) => {
                     </Script>
                 </Head>
       
-            <div className="container mx-auto px-lg-10 mb-8">
+            <div className="container mx-auto px-lg-10 px-5 py-5 mb-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <div className="col-span-1 lg:col-span-8">
                         <PostDetail post={post} />

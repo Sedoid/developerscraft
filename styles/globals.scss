@@ -165,7 +165,6 @@ a {
 
 .category:hover{
   text-decoration: none !important;
-  
   // color: red;
 }
 
@@ -228,13 +227,9 @@ a {
 
 
 @media (min-width: 320px){
-  #banner{
-    font-size: 16px
-  }
 
-  #banner-container{
-    padding-top: 25px;
-    padding-bottom: 15px;
+  #postcard_details{
+    font-size: small;
   }
 
   #about{
@@ -275,10 +270,6 @@ a {
 
 
 @media (min-width: 600px) {
-
-  #banner{
-    font-size: 19px
-  }
 
     //  About Section
     #about{
