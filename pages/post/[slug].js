@@ -21,14 +21,14 @@ const postDetails = ({post}) => {
                     <link rel="manifest" href='/manifest.json' />  
                     <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
-                    <meta name="description" content={" " + post?.excerpt + " "} />
+                    <meta name="description" content="some random full image " />
 
 
                     <meta property="og:type" content="article" />
 
-                    <meta property="og:title" content={"" +post.title + ""} />
+                    <meta property="og:title" content="some random og title" />
 
-                    <meta property="og:description" content={""+post.excerpt+""} />
+                    <meta property="og:description" content="some other random of description" />
 
                     <meta property="og:image" content={post.featuredImage?.url} />
 
