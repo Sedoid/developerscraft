@@ -42,7 +42,7 @@ export default function Home({posts}) {
     <div className="container mx-auto  pb-8">
       <Head>
         <title>Developers Craft</title>
-        <html lang="en" style={{margin: 0,padding:0}} />
+ 
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://developerscraft.com" />
         <link rel="manifest" href='/manifest.json' /> 
