@@ -27,7 +27,7 @@ const PostCard = ({post,index,category,content}) => {
                                     borderRadius='full'
                                     boxSize='35px'
                                     id="postcared_author_image"
-                                    src={post.author.photo.url}
+                                    src={post.author?.photo.url}
                                     alt={post.author.name}
                                     />
                                     
@@ -37,7 +37,7 @@ const PostCard = ({post,index,category,content}) => {
                                     </Badge>
                                 </Stack>
                                 
-                                <Text fontSize="2xl"  id="postcard_title"  lineHeight={0.9} className="transition duration-700 cursor-pointer hover:text-green-600" fontWeight="bold">
+                                <Text fontSize="2xl"  id="postcard_title"  lineHeight={1.2} className="transition duration-700 cursor-pointer hover:text-green-600" fontWeight="bold">
                                     <Link href={`/post/${post.slug}`}>
                                     {post.title}
                                     </Link>
@@ -45,7 +45,7 @@ const PostCard = ({post,index,category,content}) => {
 
                                 <div  className='rounded-md' id="latest_image" style={{
                                     width:"100%", 
-                                    height: "200px",
+                                    height: "230px",
                                     backgroundImage:`url("${post.featuredImage.url}")`,
                                     backgroundSize:'cover', 
                                     backgroundPosition:'center center'
@@ -136,7 +136,7 @@ const PostCard = ({post,index,category,content}) => {
                         fontWeight="semibold"
                         marginRight = {3}
                         id="recent"
-                        >Recent Articles</Text>
+                        >More Articles</Text>
                         <Box flexGrow="1"  height="1px" bg="gray.300"></Box>
                     </Flex>      
                        
