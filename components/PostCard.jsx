@@ -91,7 +91,7 @@ const PostCard = ({post,index,category,content}) => {
                                         bg={useColorModeValue('green.700', 'green.500')}
                                         color={useColorModeValue('white', 'white')}
                                         >
-                                        Continue Reading...
+                                        Learn More
                                     </Button>
                                     </Link>
                                 </div>

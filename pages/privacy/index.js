@@ -8,14 +8,16 @@ return(
          <Head>
             <title> Privacy Policy </title>
             <link rel="icon" href="/favicon.ico" />
-            <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
+            <meta name="description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
             <link rel="canonical" href="https://developerscraft.com" />
 
             <meta property="og:type" content="website" />
 
+<meta name="theme-color" content="#276749" />
+
             <meta property="og:title" content="Developers Craft" />
 
-            <meta property="og:description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
+            <meta property="og:description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
 
             <meta property="og:image" content="https://developerscraft.com/favicon.ico" />
 

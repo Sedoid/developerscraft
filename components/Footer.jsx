@@ -89,7 +89,7 @@ import {
                 </Link>
                 
                 <Text mt={3}>
-                    Let people see what you have contributed to their livlihood  as a Developer. <br /> Show your Crafts.
+                    Showcasing projects and products made by our developers and devcommunities for the improvement of your livehihood.
                 </Text>
                 
               </Box>

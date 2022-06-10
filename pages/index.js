@@ -47,17 +47,19 @@ export default function Home({posts}) {
         <link rel="canonical" href="https://developerscraft.com" />
         <link rel="manifest" href='/manifest.json' /> 
                
-        <meta name="description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
+        <meta name="description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
   
         <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
         <meta property="og:type" content="website" />
 
+        <meta name="theme-color" content="#276749" />
+
         <meta property="og:title" content="Developers Craft" />
 
-        <meta property="og:description" content="Check out  Articles in pidgin and english about African Local Cultures, Agriculture, Music, Health and Languages meant to Educate and Entertain you." />
+        <meta property="og:description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
 
-        <meta property="og:image" content="/mini_logo_light.png" />
+        <meta property="og:image" content="https://www.developerscraft.com/mini_logo_light.png" />
 
         <meta property="og:url" content="https://developerscraft.com" />
 
@@ -129,11 +131,11 @@ export default function Home({posts}) {
 
                 <Box  maxW="30%" flexGrow={1}>
                 <Text className='category transition duration-700 cursor-pointer hover:text-green-600'  textAlign="start"  noOfLines = {1} >
-                  <Link href="./category/backend-architecture">
-                    <SocialButton label={'Instagram'} href={'./category/backend-architecture'}>
-                    <FaServer color='' />
+                  <Link href="./category/ui-ux-design">
+                    <SocialButton label={'Instagram'} href={'./category/ui-ux-design'}>
+                    <FaPaintBrush color='' />
                     </SocialButton>    
-                    &nbsp;Backend Architectures                    
+                    &nbsp;  UI/UX Design                  
                   </Link>
                 </Text>
                 </Box>
@@ -170,11 +172,11 @@ export default function Home({posts}) {
 
           <Box maxW="30%"  flexGrow={1}>
           <Text textAlign="start" className="category transition duration-700 cursor-pointer hover:text-green-600"   noOfLines = {1}>
-            <Link textDecoration="none" href="./category/programming-concepts">
-              <SocialButton label={'finance'} href={'./category/programming-concepts'} >
+            <Link textDecoration="none" href="./category/iot">
+              <SocialButton label={'finance'} href={'./category/iot'} >
               <FaCode color='' />
               </SocialButton> 
-              &nbsp; Programming Concepts             
+              &nbsp; IoT           
             </Link>
 
           </Text>        
