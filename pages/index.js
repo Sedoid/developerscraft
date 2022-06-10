@@ -3,7 +3,7 @@ import Script from 'next/script'
 import { PostCard,Categories, PostWidget, Advertisement, Follow} from '../components'
 import { getPosts } from '../services'
 import { VisuallyHidden,Box, Input, InputRightElement, InputGroup, Button,useColorModeValue,Text, Stack, chakra, Flex, isTruncated, Link } from '@chakra-ui/react'
-import { FaServer,FaGamepad,FaApple,FaDesktop,FaCode, FaGlobeAfrica, FaPaintBrush, FaC } from 'react-icons/fa';
+import { FaServer,FaGamepad,FaApple,FaDesktop,FaCode, FaGlobeAfrica, FaPaintBrush, FaMicrochip } from 'react-icons/fa';
 
 import { FeaturedPosts } from '../sections'
 import Topics from '../components/Topics'
@@ -76,13 +76,13 @@ export default function Home({posts}) {
             className='rounded-md' size='lg' alignItems="center" justifyContent="center"  mb={8} >
         <Input
           pr='4.5rem'
-          placeholder='Whats on your mind'
+          placeholder='What project is your mind'
           height={70}
           className='rounded-md'
         />
         <InputRightElement width='6rem' className='position-relative'>
           <Button 
-          bg={useColorModeValue('green.500', 'green.500')}
+          bg={useColorModeValue('green.700', 'green.500')}
           color={useColorModeValue('white', 'white')}
           mt={5}  
           mr={5} 
@@ -104,11 +104,11 @@ export default function Home({posts}) {
 
                 <Box maxW="30%" flexGrow={1}>
                   <Text className='category transition duration-700 cursor-pointer hover:text-green-600' noOfLines = {1} textAlign="start">
-                    <Link href="./category/ui-ux-design">          
-                      <SocialButton label={'Twitter'}  href={'./category/ui-ux-design'}>
-                      <FaPaintBrush color="" />
+                    <Link href="./category/ai-ml">          
+                      <SocialButton label={'Twitter'}  href={'./category/ai-ml'}>
+                      <FaMicrochip color="" />
                       </SocialButton>  
-                      &nbsp;UI/UX Design
+                      &nbsp;Ai/ML
                      </Link>            
                   </Text>
                 </Box>

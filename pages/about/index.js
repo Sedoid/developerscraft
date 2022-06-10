@@ -38,13 +38,12 @@ return(
 
             <meta property="og:site_name" content="Developers Craft" />
 
-
             <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951101662003064"
             crossorigin="anonymous">
             </Script>
         </Head>
 
-        <Box maxW={'8xl'} >
+      <Box maxW={'8xl'} >
         <Stack
 
           align={'center'}
@@ -74,9 +73,9 @@ return(
                   bg: 'red.400',
                   zIndex: -1,
                 }}>
-                Hi there,
+                {/* Hi there, Welcome
               
-              <br />
+              <br /> */}
               {/* <Text as={'span'} className="inline-block" color={'black.400'}>
                   I &nbsp; 
               </Text> */}
@@ -93,49 +92,53 @@ return(
                 <Typewriter
                     onInit={(typewriter) => {
                         typewriter
-                        .pauseFor(2000)
-                        .typeString('<span id="about_i_am"> I am  </span> <span id="about_name" style="color:#48BB78;">Dzekewong Karlson.</span>')
+                        .pauseFor(890)
+                        .typeString('<span id="about_i_am"> This is the place')
                         // .changeDelay(30)
                         .pauseFor(250)
                         // .deleteAll()
-                        .typeString('<br/><span id="about_i_write">I\'m a </span> <span id="code"> <span style="color:#f56565">&lsaquo;</span>Dev<span style="color:#f56565">&sol;&rsaquo;</span></span>')
-                        .pauseFor(2000)
+                        .typeString('<br/><span id="about_i_write">where </span> <span id="code"> <span style="color:#f56565">&lsaquo;</span>Developers<span style="color:#f56565">&sol;&rsaquo;</span></span>')
+                        .pauseFor(890)
                         // .deleteAll()
-                        .typeString(`<br/><span id="about_here_to">Here to share my</span> <span id="craft">Craft.</span>`)
+                        .typeString(`<br/><span id="about_here_to">share their </span> <span id="craft">Craft.</span>`)
                         .start();
                     }}
                     />
 
                 </Text>
+
+                
             </Heading>
 
-            <Text color={'gray.500'} fontFamily="Roboto">
-              Welcome 
-              On this site, i write on topics surrounding Software development.
-            </Text>
-            {/* <Stack
+              <Text color={'gray.500'} fontFamily="Roboto">
+                Explore products/services built by Developers and DevCommunities which are innovative and/or solves some of your day-to-day and even future problems.
+             </Text>
+            <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
 
-              <Button
+
+
+              {/* <Button
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
                 colorScheme={'red'}
                 bg={'red.400'}
+                disabled
                 _hover={{ bg: 'red.500' }}>
-                Get started
-              </Button>
+                Sign Up
+              </Button> */}
               <Button
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
                 leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                How It Works
+                Explore
               </Button>
-            </Stack> */}
+            </Stack>
           </Stack>
           
           {/* Image */}
@@ -164,7 +167,7 @@ return(
               position={'relative'}
               height={'430px'}
               rounded={'2xl'}
-              boxShadow={'2xl'}
+              // boxShadow={'2xl'}
               width={'full'}
               overflow={'hidden'}>
 
@@ -201,6 +204,13 @@ return(
 
           </Flex>
         </Stack>
+      </Box>
+
+      <Box>
+
+            {/* <Text>
+              We select projects that provide solution to specific problems that industries/people or provide innovative ways of improving the livelihood of the average person.
+            </Text> */}
       </Box>
     </Box>
 )

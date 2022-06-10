@@ -50,7 +50,7 @@ const PostDetail = ({ post }) => {
         <Box
         bg={useColorModeValue('white', 'gray.900')}
         border="1px"
-        borderColor={useColorModeValue('gray.300', 'white')}
+        borderColor={useColorModeValue('white', 'white')}
         color={useColorModeValue('gray.700', 'gray.200')}
         className=" shadow-lg rounded-lg lg:p-8 mb-8"
         id="blog"

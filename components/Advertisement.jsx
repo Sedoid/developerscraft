@@ -12,7 +12,7 @@ const Advertisement = () => {
         className="shadow-lg rounded-md p-5 mb-8 pb-12" borderWidth='1px' borderRadius='md'>        
 
             <h5 className="text-xl mb-2 font-semibold border-b pb-1  sub_title">
-               Ads
+               Read Me
             </h5>
             <div height="100px">
                 <Loader/>

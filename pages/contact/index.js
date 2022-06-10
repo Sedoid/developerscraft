@@ -82,7 +82,7 @@ return(
                   <Box>
                     <Heading>Get in Touch</Heading>
                     <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.300">
-                      Fill up the form below to contact
+                      Fill up the form to contact
                     </Text>
                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                       <VStack pl={0} spacing={3} alignItems="flex-start">
@@ -97,7 +97,7 @@ return(
                           color="#DCE2FF"
                           _hover={{ border: '2px solid #1C6FEB' }}
                           leftIcon={<MdLocationOn color="red.300" size="20px" />}>
-                          Yaounde, Cameroon
+                          Bamenda, Cameroon
                         </Button>
 
                                                
@@ -138,30 +138,33 @@ return(
                       spacing={5}
                       px={5}
                       alignItems="flex-start">
-                      <IconButton
+                      {/* <IconButton
                         aria-label="facebook"
                         variant="ghost"
                         size="lg"
                         isRound={true}
                         _hover={{ bg: '#0D74FF' }}
                         icon={<MdFacebook size="28px" />}
-                      />
-                      <IconButton
+                      /> */}
+
+                      {/* <IconButton
                         aria-label="github"
                         variant="ghost"
                         size="lg"
                         isRound={true}
                         _hover={{ bg: '#0D74FF' }}
                         icon={<BsLinkedin size="28px" />}
-                      />
-                      <IconButton
+                      /> */}
+
+                      {/* <IconButton
                         aria-label="discord"
                         variant="ghost"
                         size="lg"
                         isRound={true}
                         _hover={{ bg: '#0D74FF' }}
                         icon={<BsDiscord size="28px" />}
-                      />
+                      /> */}
+
                     </HStack>
                   </Box>
                 </WrapItem>

@@ -99,6 +99,7 @@ export async function getStaticProps({ params }) {
   else if(params.slug == "game-development") categoryName ="Game Development" 
   else if(params.slug == "app-development") categoryName = "App Development" 
   else if(params.slug == "programming-concepts") categoryName ="Programming Concepts"
+  else if(params.slug == "ai-ml") categoryName ="Ai/ML"
 
   return {
     props: { posts, categoryName },

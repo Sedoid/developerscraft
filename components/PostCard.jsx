@@ -33,7 +33,7 @@ const PostCard = ({post,index,category,content}) => {
                                     
                                     <Text id="postcard_author" className='sm:text-xs md:text-md author_name'  fontWeight="semibold">{post.author.name}</Text>
                                     <Badge ml='1' style={{fontSize:"10px"}} p={1} className='rounded-md' colorScheme='green'>
-                                        Latest
+                                        Latest Project
                                     </Badge>
                                 </Stack>
                                 
@@ -62,8 +62,12 @@ const PostCard = ({post,index,category,content}) => {
                                     {
                                     post.featuredAudio?.url? 
                                     <Box>
-                                        <Text  fontSize="sm" fontWeight="semibold" style={{marginBottom: '5px'}}>Audio Track</Text>
-                                        <audio  controls style={{display:post.featuredAudio?.url? "block": "none"}} className="mb-7"  src={post.featuredAudio?.url} /> 
+                                        <Text  fontSize="sm" fontWeight="semibold" style={{marginBottom: '5px'}}>Listen Instead</Text>
+                                        <audio  controls style={{display:post.featuredAudio?.url? "block": "none"}} className="mb-1"  src={post.featuredAudio?.url} /> 
+
+                                        <Flex direction="row" align="center"  style={{marginTop: '1em'}}>
+                                            <Box flexGrow="1"  className="mb-5" height="1px" bg="gray.300"></Box>
+                                        </Flex>
                                     </Box>
                                     : 
                                     <Text className='' fontWeight="semibold" fontStyle="italic">No Audio Track Available<br /> </Text> 
@@ -73,7 +77,6 @@ const PostCard = ({post,index,category,content}) => {
                                         {post.content.raw?.children[0].children[0].text}<br />
                                         {post.content.raw?.children[1].children[0].text}<br />
                                         {post.content.raw?.children[2].children[0].text}<br />
-                                        {post.content.raw?.children[3].children[0].text}
                                     </Text>    
                                 </Box> 
 
@@ -85,7 +88,7 @@ const PostCard = ({post,index,category,content}) => {
                                         size={'md'}
                                         fontWeight={'normal'}
                                         px={6}
-                                        bg={useColorModeValue('green.500', 'green.500')}
+                                        bg={useColorModeValue('green.700', 'green.500')}
                                         color={useColorModeValue('white', 'white')}
                                         >
                                         Continue Reading...
@@ -136,7 +139,7 @@ const PostCard = ({post,index,category,content}) => {
                         fontWeight="semibold"
                         marginRight = {3}
                         id="recent"
-                        >More Articles</Text>
+                        >More Projects</Text>
                         <Box flexGrow="1"  height="1px" bg="gray.300"></Box>
                     </Flex>      
                        

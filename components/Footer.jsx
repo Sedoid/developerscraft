@@ -88,27 +88,15 @@ import {
                     <Image  className="cursor-pointer" alt="Developers Craft Logo"  src = {useColorModeValue('/Logo_light.png', '/logo_dark.png')}  height={70} width="inherit" />
                 </Link>
                 
+                <Text mt={3}>
+                    Let people see what you have contributed to their livlihood  as a Developer. <br /> Show your Crafts.
+                </Text>
+                
               </Box>
               <Text fontSize={'sm'}>
                 © 2022 Developers Craft. All rights reserved
               </Text>
-              <Stack direction={'row'} spacing={6}>
-                <SocialButton label={'Twitter'} href={'/'}>
-                  <FaTwitter/>
-                </SocialButton>
 
-                <SocialButton label={'Youtube'} href={'https://www.youtube.com/channel/UCBGOTbhDpNupOW0UM2IO3Ow'}>
-                    <FaYoutube/>
-                </SocialButton>
-
-                <SocialButton label={'Instagram'} href={'/'}>
-                  <FaInstagram />
-                </SocialButton>
-
-                <SocialButton label={'Facebook'} href={'/'}>
-                  <FaFacebook />
-                </SocialButton> 
-              </Stack>
             </Stack>
             <Stack align={'flex-start'}>
                 <Text fontWeight={'500'} fontSize={'md'} mb={2}>
@@ -123,7 +111,7 @@ import {
                     Support
                 </Text>
               <Link href={'/contact'}>Contact us</Link>
-
+              {/* <Link href={'/privacy'}>Privacy Policy</Link>  */}
             </Stack>
             <Stack align={'flex-start'}>
                 <Text fontWeight={'500'} fontSize={'md'} mb={2}>
@@ -236,6 +224,25 @@ import {
                       </form>
                     )}
                   </Formik>
+                <br />
+
+                <Stack direction={'row'} spacing={6}>
+                  <SocialButton label={'Twitter'} href={'/'}>
+                    <FaTwitter/>
+                  </SocialButton>
+
+                  <SocialButton label={'Youtube'} href={'https://www.youtube.com/channel/UCBGOTbhDpNupOW0UM2IO3Ow'}>
+                      <FaYoutube/>
+                  </SocialButton>
+
+                  <SocialButton label={'Instagram'} href={'/'}>
+                    <FaInstagram />
+                  </SocialButton>
+
+                  <SocialButton label={'Facebook'} href={'/'}>
+                    <FaFacebook />
+                  </SocialButton> 
+                </Stack>
 
             </Stack>
           </SimpleGrid>
