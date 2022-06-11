@@ -80,9 +80,7 @@ function Header() {
                 <Container textAlign="center"  py={7} id="banner-container"  as={Stack} maxW={'6xl'} className=''>
                     <Text fontWeight="bold" fontSize="19px"  color="white" id="banner" className="capitalize">
                         What developers Do and How you use it
-                        {/* What developers Do and How you use it */}
-                        {/* What developers are working on */}
-                        {/* Explore Projects Developers are working on */}
+
                     </Text>
                 </Container>                 
             </Box>
