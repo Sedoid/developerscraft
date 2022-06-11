@@ -8,7 +8,7 @@ return(
          <Head>
             <title> Privacy Policy </title>
             <link rel="icon" href="/favicon.ico" />
-            <meta name="description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
+            <meta name="description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
             <link rel="canonical" href="https://developerscraft.com" />
 
             <meta property="og:type" content="website" />
@@ -17,7 +17,7 @@ return(
 
             <meta property="og:title" content="Developers Craft" />
 
-            <meta property="og:description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
+            <meta property="og:description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
 
             <meta property="og:image" content="https://developerscraft.com/favicon.ico" />
 

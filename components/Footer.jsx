@@ -239,7 +239,7 @@ import {
                     <FaInstagram />
                   </SocialButton>
 
-                  <SocialButton label={'Facebook'} href={'/'}>
+                  <SocialButton label={'Facebook'} href={'https://www.facebook.com/DevelopersCraft-114862541200750'}>
                     <FaFacebook />
                   </SocialButton> 
                 </Stack>

@@ -21,7 +21,7 @@ const CategoryPost = ({ posts , categoryName }) => {
         <link rel="manifest" href='/manifest.json' />  
         <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
-        <meta name="description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
+        <meta name="description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
         <link rel="canonical" href="https://developerscraft.com" />
 
         <meta property="og:type" content="website" />
@@ -30,7 +30,7 @@ const CategoryPost = ({ posts , categoryName }) => {
 
         <meta property="og:title" content="Developers Craft" />
 
-        <meta property="og:description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
+        <meta property="og:description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
 
         <meta property="og:image" content="https://developerscraft.com/favicon.ico" />
 
@@ -102,6 +102,7 @@ export async function getStaticProps({ params }) {
   else if(params.slug == "app-development") categoryName = "App Development" 
   else if(params.slug == "programming-concepts") categoryName ="Programming Concepts"
   else if(params.slug == "ai-ml") categoryName ="Ai/ML"
+  else if(params.slug == "iot") categoryName ="Internet of Things"
 
   return {
     props: { posts, categoryName },

@@ -47,7 +47,7 @@ export default function Home({posts}) {
         <link rel="canonical" href="https://developerscraft.com" />
         <link rel="manifest" href='/manifest.json' /> 
                
-        <meta name="description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
+        <meta name="description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
   
         <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
@@ -57,7 +57,7 @@ export default function Home({posts}) {
 
         <meta property="og:title" content="Developers Craft" />
 
-        <meta property="og:description" content="Showcasing software projects and products developers and devcommunities  have build or working on in Cameroon and Africa at Large. Explore wep and mobile applications, Ai/ML and design projects by African developers." />
+        <meta property="og:description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
 
         <meta property="og:image" content="https://www.developerscraft.com/mini_logo_light.png" />
 
