@@ -70,7 +70,7 @@ const PostCard = ({post,index,category,content}) => {
                                         </Flex>
                                     </Box>
                                     : 
-                                    <Text className='' fontWeight="semibold" fontStyle="italic">No Audio Track Available<br /> </Text> 
+                                    ''
                                     }
                                     
                                     <Text id="recent_post_text">       
@@ -100,13 +100,13 @@ const PostCard = ({post,index,category,content}) => {
 
                                 <Box mt={5} id="postcard_details" spacing="10px" className='w-full' align="left" bg="transparent">
                                     <span>{moment(post.createdAt).format('MMM DD')}<FaFileAudio className='mr-5 ml-2' style={{display:post.featuredAudio?.url? "inline-block": "none"}}  /></span>
-                                    {
+                                    {/* {
                                         post.categories.map(category => 
                                             <Badge  key={category.slug}   ml='1' colorScheme='blue' style={{fontSize:"12px"}} paddingX={3} paddingY={1}  rounded= "base" className='rounded-md'>
                                                 {category.name}
                                             </Badge>                                        
                                         )
-                                    }
+                                    } */}
 
                                     {
                                         post.topics.map(topic => 
