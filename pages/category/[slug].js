@@ -21,7 +21,7 @@ const CategoryPost = ({ posts , categoryName }) => {
         <link rel="manifest" href='/manifest.json' />  
         <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
-        <meta name="description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
+        <meta name="description" content={"Showcasing " +categoryName +" projects and products worked on by developers and devcommunities in Cameroon,Nigeria, Kenya and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers"} />
         <link rel="canonical" href="https://developerscraft.com" />
 
         <meta property="og:type" content="website" />
@@ -30,7 +30,7 @@ const CategoryPost = ({ posts , categoryName }) => {
 
         <meta property="og:title" content="Developers Craft" />
 
-        <meta property="og:description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
+        <meta property="og:description" content={"Showcasing " +categoryName +" projects and products worked on by developers and devcommunities in Cameroon,Nigeria, Kenya and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers"} />
 
         <meta property="og:image" content="https://developerscraft.com/favicon.ico" />
 

@@ -47,7 +47,7 @@ export default function Home({posts}) {
         <link rel="canonical" href="https://developerscraft.com" />
         <link rel="manifest" href='/manifest.json' /> 
                
-        <meta name="description" content="Showcasing software projects and products worked on by developers and devcommunities in Cameroon and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
+        <meta name="description" content="Showcasing software development projects and products worked on by developers and devcommunities in Cameroon,Nigeria, Kenya and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers." />
   
         <link rel="apple-touch-icon"  href="/icons/apple-touch-icon.png" />
 
@@ -173,18 +173,19 @@ export default function Home({posts}) {
 
 
           <Box  maxW="30%" flexGrow={1}>
-                <Text className='category transition duration-700 cursor-pointer hover:text-green-600'  textAlign="start"  noOfLines = {1} >
-                  <Link href="./category/ui-ux-design">
-                    <SocialButton label={'Instagram'} href={'./category/ui-ux-design'}>
-                    <FaPaintBrush color='' />
-                    </SocialButton>    
-                    &nbsp;  UI/UX Design                  
-                  </Link>
-                </Text>
-                </Box>
+            <Text className='category transition duration-700 cursor-pointer hover:text-green-600'  textAlign="start"  noOfLines = {1} >
+              <Link href="./category/ui-ux-design">
+                <SocialButton label={'Instagram'} href={'./category/ui-ux-design'}>
+                <FaPaintBrush color='' />
+                </SocialButton>    
+                &nbsp;  UI/UX Design                  
+              </Link>
+            </Text>
+          </Box>
 
           </Stack>
         </Box>
+
       </Flex>
 
       {/* <FeaturedPosts /> */}
