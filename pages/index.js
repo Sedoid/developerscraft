@@ -129,16 +129,18 @@ export default function Home({posts}) {
                 </Box>
 
 
-                <Box  maxW="30%" flexGrow={1}>
-                <Text className='category transition duration-700 cursor-pointer hover:text-green-600'  textAlign="start"  noOfLines = {1} >
-                  <Link href="./category/ui-ux-design">
-                    <SocialButton label={'Instagram'} href={'./category/ui-ux-design'}>
-                    <FaPaintBrush color='' />
-                    </SocialButton>    
-                    &nbsp;  UI/UX Design                  
-                  </Link>
-                </Text>
-                </Box>
+                <Box maxW="30%"  flexGrow={1}>
+          <Text textAlign="start" className="category transition duration-700 cursor-pointer hover:text-green-600"   noOfLines = {1}>
+            <Link textDecoration="none" href="./category/iot">
+              <SocialButton label={'finance'} href={'./category/iot'} >
+              <FaCode color='' />
+              </SocialButton> 
+              &nbsp; IoT           
+            </Link>
+
+          </Text>        
+          </Box>
+
 
           </Stack>
 
@@ -170,17 +172,16 @@ export default function Home({posts}) {
           </Box>
 
 
-          <Box maxW="30%"  flexGrow={1}>
-          <Text textAlign="start" className="category transition duration-700 cursor-pointer hover:text-green-600"   noOfLines = {1}>
-            <Link textDecoration="none" href="./category/iot">
-              <SocialButton label={'finance'} href={'./category/iot'} >
-              <FaCode color='' />
-              </SocialButton> 
-              &nbsp; IoT           
-            </Link>
-
-          </Text>        
-          </Box>
+          <Box  maxW="30%" flexGrow={1}>
+                <Text className='category transition duration-700 cursor-pointer hover:text-green-600'  textAlign="start"  noOfLines = {1} >
+                  <Link href="./category/ui-ux-design">
+                    <SocialButton label={'Instagram'} href={'./category/ui-ux-design'}>
+                    <FaPaintBrush color='' />
+                    </SocialButton>    
+                    &nbsp;  UI/UX Design                  
+                  </Link>
+                </Text>
+                </Box>
 
           </Stack>
         </Box>
