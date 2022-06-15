@@ -28,7 +28,7 @@ return(
 
             <meta property="og:type" content="website" />
 
-<meta name="theme-color" content="#276749" />
+            <meta name="theme-color" content="#276749" />
 
             <meta property="og:title" content="Developers Craft" />
 

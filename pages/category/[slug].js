@@ -30,7 +30,7 @@ const CategoryPost = ({ posts , categoryName }) => {
 
         <meta property="og:title" content="Developers Craft" />
 
-        <meta property="og:description" content={"Showcasing " +categoryName +" projects and products worked on by developers and devcommunities in Cameroon,Nigeria, Kenya and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers"} />
+        <meta property="og:description" content={"Showcasing " + categoryName +" projects and products worked on by developers and devcommunities in Cameroon,Nigeria, Kenya and Africa at Large. Explore Web and mobile applications, Ai/ML and design projects brought about by African developers"} />
 
         <meta property="og:image" content="https://developerscraft.com/favicon.ico" />
 

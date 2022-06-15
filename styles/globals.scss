@@ -120,13 +120,14 @@ a {
 }
 
 #postcard_title{
-  font-family: 'Cairo';
+  font-family: 'Roboto';
   margin-top: 15px;
   margin-bottom: 8px;
 }
 
 #postcard_content, .follow_content{
   font-family: 'Roboto';
+  width: 100%;
   // line-height: 25px;
   // word-spacing: 4px;
 }
@@ -172,6 +173,14 @@ a {
 
 #postcard_author{
   font-size: 15px;
+}
+
+// #post_title{
+//   font-size: 25px
+// }
+
+#post_image{
+  min-height: 250px;
 }
 
 // Audio Tag
@@ -269,6 +278,14 @@ a {
         font-size: 35px;
       }
     }
+
+    #post_title{
+      font-size: 17px;
+    }
+
+    #post_header{
+      padding: 10px;
+    }
   
 
 }
@@ -352,6 +369,10 @@ a {
 
 @media (min-width: 1024px) {
 
+  #post_title{
+    font-size: 22px;
+    line-height: 1.2;
+  }
 
   #about{
 

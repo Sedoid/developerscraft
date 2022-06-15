@@ -20,8 +20,8 @@ const PostCard = ({post,index,category,content}) => {
                         maxW="100%" borderWidth='1px' borderRadius='md' overflow='hidden'
                         className='shadow-sm'
                     >
-                        <Flex id="latest" justifyContent="space-between"alignItems="stretch" className='p-4' align="start">
-                            <VStack id="latest_content" align="start" >
+                        <Flex id="latest" justifyContent="space-between" alignItems="center" align="center">
+                            <VStack px={2} py={3} width={'100%'} id="latest_content" align="start" >
                                 <Stack direction="row" spacing="10px" align="center">
                                     <Image
                                     borderRadius='full'
@@ -37,20 +37,20 @@ const PostCard = ({post,index,category,content}) => {
                                     </Badge>
                                 </Stack>
                                 
-                                <Text fontSize="2xl"  id="postcard_title"  lineHeight={1.2} className="transition duration-700 cursor-pointer hover:text-green-600" fontWeight="bold">
+                                <Text fontSize="2xl" width={'100%'} id="postcard_title"  className="transition duration-700 cursor-pointer hover:text-green-600" fontWeight="bold">
                                     <Link href={`/post/${post.slug}`}>
                                     {post.title}
                                     </Link>
                                 </Text> 
-
-                                <div  className='rounded-md' id="latest_image" style={{
+                                
+                                {/* rounded-md */}
+                                <div  className='' id="latest_image" style={{
                                     width:"100%", 
                                     height: "230px",
                                     backgroundImage:`url("${post.featuredImage.url}")`,
                                     backgroundSize:'cover', 
                                     backgroundPosition:'center center'
-                                    
-                                    }}>
+                                }}>
                                 </div>
 
 

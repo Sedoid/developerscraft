@@ -56,12 +56,14 @@ const PostDetail = ({ post }) => {
         id="blog"
         >
                
-          <div className="px-4 lg:px-0"> 
-            <div className="flex items-center  lg:mb-0 lg:w-auto">
-              <img alt={post.author.name} src={post.author.photo.url} height='40px' width="50px" className="rounded-full align-middle" />
-              <Stack align="start" ml={5} className="ml-sm-1" justifycontents="space-around">
-                <Text className="inline align-middle text-grey-700 text-lg">{post.author.name}</Text>
-                <Flex className="font-medium text-gray-700 align-middle justify-around" direction="row" align="center">
+          <Box id="post_header" className="md:px-4 xs:px-3 lg:px-0"> 
+            <Box className="flex items-center  lg:mb-0 lg:w-auto">
+              <img alt={post.author.name} src={post.author.photo.url} height='40px' width="40px" className="rounded-full align-middle" />
+              <Stack align="start" height="50px" ml={5} className="ml-sm-1" justifycontents="space-around">
+                <Text className="inline align-middle text-grey-700 text-sm" fontStyle="bold">{post.author.name}</Text>
+                <Flex className="font-medium text-gray-700 align-middle justify-around" mt={0} direction="row" align="center"
+                 style={{margin:"0em"}}
+                >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-green-500" fill="none" viewBox="0 0 24 24"   stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
@@ -70,15 +72,13 @@ const PostDetail = ({ post }) => {
                     </Text>
                 </Flex> 
               </Stack>
+            </Box>
 
-          </div>
+            <h1 id="post_title" className="my-4 text-1xl font-semibold">{post.title}</h1>                
+          </Box>
 
-            <h1 className="my-4 text-2xl font-semibold">{post.title}</h1>                
-          </div>
-
-          <div className="relative overflow-hidden shadow-md mb-5">
-              <img src={post.featuredImage.url}  alt={post.title} className="object-top h-full w-full " />
-              
+          <div id="post_image" className="relative overflow-hidden shadow-md mb-5">
+              <img src={post.featuredImage.url}   alt={post.title} className="object-top h-full w-full " />
           </div>
 
           
