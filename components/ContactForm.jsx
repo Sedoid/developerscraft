@@ -64,7 +64,7 @@ export default function ContactForm (){
         }
             onSubmit={(values, { setSubmitting }) => {
                        
-                fetch('http://gicmailer.herokuapp.com/',{
+                fetch('https://gicmailer.herokuapp.com/',{
                   method:'POST',
                   body: JSON.stringify({
                     email: values.email,
