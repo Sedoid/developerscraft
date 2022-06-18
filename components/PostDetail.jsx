@@ -72,15 +72,10 @@ const PostDetail = ({ post }) => {
                 }
               </ul>
             );
-          
-            case 'link':
-              return(
-                <a></a>
-              )
 
           case 'link':
             console.log('*** found a link ***')
-            console.log()
+            console.log(obj)
             return (
               <a></a>
             );
