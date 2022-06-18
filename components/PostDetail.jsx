@@ -1,9 +1,19 @@
 import React from 'react'
 import moment from 'moment';
 import { Stack,Text, Box, Flex,useColorModeValue } from '@chakra-ui/react';
+import { object } from 'yup';
 
 const PostDetail = ({ post }) => {
     const getContentFragment = (index, text, obj, type) => {
+      console.log('******  post fragments  *****')
+      console.log(index)
+      console.log('-------------')
+      console.log(text)
+      console.log('-------------')
+      console.log(obj)
+      console.log('-------------')
+      console.log(type)
+      console.log('-------------')
         let modifiedText = text;
         
         if (obj) {
@@ -41,6 +51,20 @@ const PostDetail = ({ post }) => {
             return (                       
               <audio controls src={obj.src} />     
             );
+          case 'list':
+            console.log('*** found a List ***')
+            console.log()
+            return (
+              <ol></ol>
+            );
+
+          case 'link':
+            console.log('*** found a link ***')
+            console.log()
+            return (
+              <a></a>
+            );
+
           default:
             return modifiedText;
         }
