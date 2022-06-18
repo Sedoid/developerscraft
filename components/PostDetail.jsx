@@ -52,12 +52,31 @@ const PostDetail = ({ post }) => {
             return (                       
               <audio controls src={obj.src} />     
             );
-          case 'list':
-            console.log('*** found a List ***')
-            console.log()
+          case 'numbered-list':
             return (
-              <ol></ol>
+              <ol>
+                {obj.children.map(child => {
+                  if(child.type =="list-item")
+                  <li> {child.children[0].text}</li>
+                  })
+                }
+              </ol>
             );
+          case 'bulleted-list':
+            return (
+              <ul>
+                {obj.children.map(child => {
+                  if(child.type =="list-item")
+                  <li> {child.children[0].text}</li>
+                  } )
+                }
+              </ul>
+            );
+          
+            case 'link':
+              return(
+                <a></a>
+              )
 
           case 'link':
             console.log('*** found a link ***')
