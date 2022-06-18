@@ -1,20 +1,21 @@
 import React from 'react'
 import moment from 'moment';
-import { Stack,Text, Link, ListItem,UnorderedList,OrderedList, Box, Flex,useColorModeValue } from '@chakra-ui/react';
+import { Stack,Text, Link, ListItem,UnorderedList,OrderedList,ListIcon, Box, Flex,useColorModeValue } from '@chakra-ui/react';
 import { object } from 'yup';
+import { MdCheckCircle } from 'react-icons/md';
 
 const PostDetail = ({ post }) => {
     const getContentFragment = (index, text, obj, type) => {
-      console.log('******  post fragments  *****')
-      console.log(index)
-      console.log('-------------')
-      console.log(text)
-      console.log('-------------')
-      console.log(obj)
-      console.log('-------------')
-      console.log(type)
-      console.log('-------------')
-      console.log('****** post fragments ended *****')
+      // console.log('******  post fragments  *****')
+      // console.log(index)
+      // console.log('-------------')
+      // console.log(text)
+      // console.log('-------------')
+      // console.log(obj)
+      // console.log('-------------')
+      // console.log(type)
+      // console.log('-------------')
+      // console.log('****** post fragments ended *****')
         let modifiedText = text;
         
         if (obj) {
@@ -32,7 +33,7 @@ const PostDetail = ({ post }) => {
 
           if(obj.href){
             modifiedText = (
-            <Link color="green.600" fontFamily={"cairo"} className="" href={obj.href} isExternal={obj.openInNewTab}>
+            <Link color="green.600" fontFamily={"cairo"} className="capitalize" href={obj.href} isExternal={obj.openInNewTab}>
               {obj.title}
             </Link>
             )
@@ -64,6 +65,7 @@ const PostDetail = ({ post }) => {
             return (
               <OrderedList>
                 {obj.children.map(child => {
+
                   if(child.type =="list-item")
                   return <ListItem mb="2"> {child.children[0].children[0].text}</ListItem>
                   })
@@ -74,8 +76,20 @@ const PostDetail = ({ post }) => {
             return (
               <UnorderedList>
                 {obj.children.map(child => {
+                  let line = ''
+
                   if(child.type =="list-item")
-                  return <ListItem mb="2"> {child.children[0].children[0].text}</ListItem>
+                  return <ListItem display={"flex"} flexDir="row" mb="2"> 
+                    <ListIcon as={MdCheckCircle} color="green.600" />
+                  {
+                    child.children[0].children.map(end => {
+                      console.log(end)
+                    
+                    line =
+                       <Text fontStyle={"bold"} className={(end.bold?"font-bold":"font-normal")+" "+(end.italic?"italic":"not-italic")}>{" "+end.text+" "}</Text>
+                       
+                    return line
+                  })}</ListItem>
                   } )
                 }
               </UnorderedList>
