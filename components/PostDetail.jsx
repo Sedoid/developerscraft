@@ -14,6 +14,7 @@ const PostDetail = ({ post }) => {
       console.log('-------------')
       console.log(type)
       console.log('-------------')
+      console.log('****** post fragments ended *****')
         let modifiedText = text;
         
         if (obj) {
