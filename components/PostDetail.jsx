@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment';
-import { Stack,Text, Box, Flex,useColorModeValue } from '@chakra-ui/react';
+import { Stack,Text, Link, ListItem,UnorderedList,OrderedList, Box, Flex,useColorModeValue } from '@chakra-ui/react';
 import { object } from 'yup';
 
 const PostDetail = ({ post }) => {
@@ -29,6 +29,14 @@ const PostDetail = ({ post }) => {
           if (obj.underline) {
             modifiedText = (<u key={index}>{text}</u>);
           }
+
+          if(obj.href){
+            modifiedText = (
+            <Link color="green.600" fontFamily={"cairo"} className="" href={obj.href} isExternal={obj.openInNewTab}>
+              {obj.title}
+            </Link>
+            )
+          }
         }
     
         switch (type) {
@@ -54,30 +62,23 @@ const PostDetail = ({ post }) => {
             );
           case 'numbered-list':
             return (
-              <ol>
+              <OrderedList>
                 {obj.children.map(child => {
                   if(child.type =="list-item")
-                  <li> {child.children[0].text}</li>
+                  return <ListItem mb="2"> {child.children[0].children[0].text}</ListItem>
                   })
                 }
-              </ol>
+              </OrderedList>
             );
           case 'bulleted-list':
             return (
-              <ul>
+              <UnorderedList>
                 {obj.children.map(child => {
                   if(child.type =="list-item")
-                  <li> {child.children[0].text}</li>
+                  return <ListItem mb="2"> {child.children[0].children[0].text}</ListItem>
                   } )
                 }
-              </ul>
-            );
-
-          case 'link':
-            console.log('*** found a link ***')
-            console.log(obj)
-            return (
-              <a></a>
+              </UnorderedList>
             );
 
           default:
