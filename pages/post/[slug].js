@@ -32,7 +32,7 @@ const postDetails = ({post}) => {
 
                 <meta property="og:image" content={post.featuredImage?.url} />
 
-                <meta property="og:url" content={"https://developerscraft.com/post/"+post.title} />
+                <meta property="og:url" content={"https://developerscraft.com/post/"+post.slug} />
 
                 <meta property="og:site_name" content="https://developerscraft.com" />
 
