@@ -74,9 +74,9 @@ const PostCard = ({post,index,category,content}) => {
                                     }
                                     
                                     <Text id="recent_post_text">       
-                                        {post.content.raw?.children[0].children[0].text}<br />
-                                        {post.content.raw?.children[1].children[0].text}<br />
-                                        {post.content.raw?.children[2].children[0].text}<br />
+                                        {post.content.raw?.children[0]?.children[0].text}<br />
+                                        {post.content.raw?.children[1]?.children[0].text}<br />
+                                        {post.content.raw?.children[2]?.children[0].text}<br />
                                     </Text>    
                                 </Box> 
 

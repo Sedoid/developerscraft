@@ -64,10 +64,10 @@ const PostDetail = ({ post }) => {
           case 'numbered-list':
             return (
               <OrderedList>
-                {obj.children.map(child => {
+                {obj.children.map(function(child,index) {
 
                   if(child.type =="list-item")
-                  return <ListItem mb="2"> {child.children[0].children[0].text}</ListItem>
+                  return <ListItem key={index} mb="2"> {child.children[0].children[0].text}</ListItem>
                   })
                 }
               </OrderedList>
@@ -75,11 +75,11 @@ const PostDetail = ({ post }) => {
           case 'bulleted-list':
             return (
               <UnorderedList>
-                {obj.children.map(child => {
+                {obj.children.map(function(child,index){
                   let line = ''
 
                   if(child.type =="list-item")
-                  return <ListItem display={"flex"} flexDir="row" mb="2"> 
+                  return <ListItem key={index} display={"flex"} flexDir="row" mb="2"> 
                     <ListIcon as={MdCheckCircle} color="green.600" />
                   {
                     child.children[0].children.map(end => {

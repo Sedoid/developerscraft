@@ -22,16 +22,17 @@ const postDetails = ({post}) => {
 
                 <meta name="description" content={" " + post?.excerpt + " "} />
 
+                <meta property="og:type" content="website" />
+                
+                <meta name="theme-color" content="#276749" />
 
-                <meta property="og:type" content="Project" />
+                <meta property="og:title" content={post.title} />
 
-                <meta property="og:title" content={"" +post.title + ""} />
-
-                <meta property="og:description" content={""+post.excerpt+""} />
+                <meta property="og:description" content={post.excerpt} />
 
                 <meta property="og:image" content={post.featuredImage?.url} />
 
-                <meta property="og:url" content={"https://developerscraft.com/post/"+post.featuredImagetitle} />
+                <meta property="og:url" content={"https://developerscraft.com/post/"+post.title} />
 
                 <meta property="og:site_name" content="https://developerscraft.com" />
 
