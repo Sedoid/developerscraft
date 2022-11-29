@@ -27,7 +27,7 @@ const PostCard = ({post,index,category,content}) => {
                                     borderRadius='full'
                                     boxSize='35px'
                                     id="postcared_author_image"
-                                    src={post.author?.photo.url}
+                                    src={post.author?.photo?.url}
                                     alt={post.author.name}
                                     />
                                     

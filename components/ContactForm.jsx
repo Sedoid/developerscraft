@@ -79,6 +79,7 @@ export default function ContactForm (){
                 }).then(response => response.json())
                 .then(json =>{
                   console.log('******response arrived*****')
+                  console.log(json)
                   if(json.status){
                        values.email = ""
                        values.name = ""
@@ -95,11 +96,11 @@ export default function ContactForm (){
                   },15000)
                   
                 }).catch(e =>{
-                  if(json.status){
-                    document.getElementById("sent_status_success").style.display="block"
-                  }else{
+                  // if(json.status){
+                  //   document.getElementById("sent_status_success").style.display="block"
+                  // }else{
                     document.getElementById("sent_status_failed").style.display="block"
-                  }
+                  // }
                   setTimeout(()=>{
                    
                     document.getElementById("sent_status_success").style.display="none"

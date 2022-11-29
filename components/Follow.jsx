@@ -65,9 +65,12 @@ const Follow = () => {
                     <FaInstagram style={{color:'#fb3958'}} />
                     </SocialButton>
 
-                    <SocialButton label={'Facebook'} href={'https://www.facebook.com/DevelopersCraft-114862541200750'}>
-                    <FaFacebook  style={{color:'#3b5998'}} />
-                    </SocialButton> 
+                    <a href={'https://www.facebook.com/developerscraft/'} target="_blank">
+                                        <SocialButton  label={'Facebook'}>
+                                        <FaFacebook  style={{color:'#3b5998'}} />
+                                        </SocialButton>   
+                    </a>
+
 
               </Stack>
             </Box>
