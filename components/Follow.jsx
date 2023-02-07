@@ -53,29 +53,31 @@ const Follow = () => {
                 </Center>
                 <Stack direction={'row'} align="center" justifyContent="center" spacing={7}>
 
+                
+                <a href={'https://www.facebook.com/developerscraft/'} target="_blank">
+                        <SocialButton  label={'Facebook'}>
+                        <FaFacebook  style={{color:'#3b5998'}} />
+                        </SocialButton>   
+                    </a>
+
+
                     <SocialButton label={'Twitter'} href={'/'}>
                     <FaTwitter style={{color:'#00acee'}}/>
                     </SocialButton>
                   
                   
-                    <a href={'https://www.youtube.com/channel/UCBGOTbhDpNupOW0UM2IO3Ow'} target="_blank">
-                    <SocialButton label={'Youtube'} href={'https://www.youtube.com/channel/UCBGOTbhDpNupOW0UM2IO3Ow'}>
+                    <a href={'/'} target="_blank">
+                    <SocialButton label={'Youtube'} href={'/'}>
                     <FaYoutube color='#fb3958' />
                     </SocialButton>
                     </a>
 
 
                     
-                    <a href={'https://www.facebook.com/developerscraft/'} target="_blank">
+                    <a href={'/'} target="_blank">
                       <SocialButton label={'Instagram'} href={'/'}>
                       <FaInstagram style={{color:'#fb3958'}} />
                       </SocialButton>
-                    </a>
-
-                    <a href={'https://www.facebook.com/developerscraft/'} target="_blank">
-                        <SocialButton  label={'Facebook'}>
-                        <FaFacebook  style={{color:'#3b5998'}} />
-                        </SocialButton>   
                     </a>
 
 

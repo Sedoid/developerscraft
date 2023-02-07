@@ -78,7 +78,7 @@ export default function Home({posts}) {
             className='rounded-md' size='lg' alignItems="center" justifyContent="center"  mb={8} >
         <Input
           pr='4.5rem'
-          placeholder='What project is your mind'
+          placeholder='Search for any projects '
           height={70}
           className='rounded-md'
         />
@@ -164,7 +164,7 @@ export default function Home({posts}) {
               <SocialButton label={'sports'} href={'./category/app-development'}>
               <FaApple color="" />
               </SocialButton>  
-              &nbsp;App Develpment             
+              &nbsp;App Development             
             </Link>
      
           </Text>

@@ -47,6 +47,7 @@
 // @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Lobster&family=Roboto:wght@300;400;500&display=swap");
 
 
+
 html,
 body {
   padding: 0;
@@ -146,6 +147,24 @@ a {
   font-family: 'Cairo', sans-serif;
   font-size: 18px;
 }
+
+
+
+.ads_title{
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px; 
+  text-align: center;
+}
+
+.lists{
+  // list-style-type: ;
+  font-family: Roboto;
+}
+
+.lists li{
+  padding-top: 5px;
+}
+
 .badge, .author_name{
   font-family: 'Cairo', sans-serif;
   font-size: 16px !important;

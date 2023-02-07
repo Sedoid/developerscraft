@@ -86,7 +86,7 @@ const PostDetail = ({ post }) => {
                       console.log(end)
                     
                     line =
-                       <Text fontStyle={"bold"} className={(end.bold?"font-bold":"font-normal")+" "+(end.italic?"italic":"not-italic")}>{" "+end.text+" "}</Text>
+                       <Text fontStyle={"bold"} className={(end.bold?"font-bold":"font-normal")+" "+(end.italic?"italic":"not-italic")}>{" "+end.text+" "}  &nbsp;</Text>
                        
                     return line
                   })}</ListItem>
